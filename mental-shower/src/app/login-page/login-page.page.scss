@@ -7,9 +7,20 @@
 
 .centeredContent {
       display: block;
-      width: 90%;
+      width: 100%;
       margin: 20% auto 10%;
       padding: 30%;
       position: relative;
+
+}
+.loginButton {
+  background-color: #6EA81A;
+  border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 17px;
 
 }
