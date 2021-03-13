@@ -3,24 +3,48 @@
       margin-left: auto;
       margin-right: auto;
       margin-top: 20%;
+      margin-bottom:50%;
 }
 
 .centeredContent {
+
       display: block;
-      width: 100%;
-      margin: 20% auto 10%;
-      padding: 30%;
-      position: relative;
+       
+     margin: 3% auto 3%;
+
+      width: 70%;
+      
+      padding-inline-start: 20px;
+
+      background: #EFEFEF;
+border: 1px solid #C7C6C6;
+box-sizing: border-box;
+border-radius: 8px;
 
 }
+
+
+
 .loginButton {
-  background-color: #6EA81A;
+  
+  
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 32px;
+text-align: center;
+  
   border: none;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 17px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+  padding-left: 15%;
+  padding-right: 15%;
+  
+border-radius: 3px;
+  
+  
+  display: block;
+  
 
 }

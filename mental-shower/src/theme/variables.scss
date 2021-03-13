@@ -3,6 +3,17 @@
 
 /** Ionic CSS Variables **/
 :root {
+
+ //**  LOGO GREEN  **//
+  --ion-color-logo-green: #6EA81A;
+  --ion-color-logo-green-rgb: 110,168,26;
+  --ion-color-logo-green-contrast: #000000;
+  --ion-color-logo-green-contrast-rgb: 0,0,0;
+  --ion-color-logo-green-shade: #619417;
+  --ion-color-logo-green-tint: #7db131;
+
+
+
   /** primary **/
   --ion-color-primary: #3880ff;
   --ion-color-primary-rgb: 56, 128, 255;
@@ -75,7 +86,14 @@
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
 }
-
+.ion-color-logo-green {
+  --ion-color-base: var(--ion-color-logo-green);
+  --ion-color-base-rgb: var(--ion-color-logo-green-rgb);
+  --ion-color-contrast: var(--ion-color-logo-green-contrast);
+  --ion-color-contrast-rgb: var(--ion-color-logo-green-contrast-rgb);
+  --ion-color-shade: var(--ion-color-logo-green-shade);
+  --ion-color-tint: var(--ion-color-logo-green-tint);
+}
 @media (prefers-color-scheme: dark) {
   /*
    * Dark Colors
