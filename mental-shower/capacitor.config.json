@@ -1,6 +1,6 @@
 {
   "appId": "io.ionic.starter",
-  "appName": "Mental Shower",
+  "appName": "mental-shower",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",
