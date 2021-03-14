@@ -12,9 +12,9 @@ export class Tab2Page {
   constructor( private alertCtrl: AlertController)
   {}
 
-  async presentAlert() {
+  async presentAlert(msg:string) {
     const alert = await this.alertCtrl.create ({
-    message: 'Air Speed parameter allows you to influence the ventilator’s intensity.'
+    message: msg
    });
 
     await alert.present ();

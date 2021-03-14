@@ -17,25 +17,28 @@
   <ion-icon name="thermometer-outline"></ion-icon>
 
 
-  <ion-content class ="airSpeed">
-      <ion-icon name="information-circle-outline" (click)="presentAlert ()"></ion-icon>
-  
-  
-      <ion-content class ="temperature">
-        <ion-icon name="information-circle-outline" (click)="presentAlert ()"></ion-icon>
-  </ion-content>
+  <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+  </ion-range>
+      <ion-icon class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Air Speed parameter allows you to influence the ventilator’s intensity.')"></ion-icon>
+      <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+      </ion-range>
+     <ion-icon class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Temperature parameter allows you to adjust the degrees in a zone.')"></ion-icon>
+      
+     <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+    </ion-range>
+  <ion-icon class="infoIcon" name="information-circle-outline"  (click)="presentAlert ('Humidity parameter allows you to adjusts the level of water vapor in the air.')"></ion-icon>
+  <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+  </ion-range>
+  <ion-icon class="infoIcon" name="information-circle-outline"  (click)="presentAlert ('Air Quality parameter allows you getting fresh air everytime it is needed.')"></ion-icon>
 
-  <ion-icon name="information-circle-outline"></ion-icon>
 
-  <ion-icon name="information-circle-outline"></ion-icon>
+  <ion-textarea>
+    Click the button below when you are ready to proceed with joining a pre-existing group or simply claim a new spot.
+  </ion-textarea>
 
-
-  <ion-textarea>Click the button below when you are ready to proceed with joining a pre-existing group or simply claim a new spot.
- </ion-textarea>
-
-<ion-button class="startButton" color="logo-green">
+ <ion-button class="startButton" shape="round" color="logo-green">
   <div style="color:white">Start</div> 
-</ion-button>
+ </ion-button>
 
   
 </ion-content>
