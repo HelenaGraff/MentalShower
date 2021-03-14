@@ -1,3 +1,30 @@
+ion-title {
+
+    font-family: Rozacea;
+    font-style: normal;
+    font-size: 45px;
+    line-height: 100%;
+    text-align: center;
+    display: block;
+    color: #000000;
+    }
+
+
+ion-textarea {
+
+font-family: Inter;
+font-style: normal;
+font-weight: normal;
+font-size: 16px;
+line-height: 20px;
+text-align: center;
+margin-top: 110%;
+margin-left: auto;
+margin-right: auto;
+
+color: black;
+}
+
 .startButton {
 
     display: block;
@@ -7,7 +34,6 @@
     
     padding-left: 8%;
     padding-right: 8%;
-    margin-top: 110%;
     margin-bottom: 20%;
     margin-left: 25%;
     margin-right: 25%;
