@@ -14,7 +14,7 @@
   </ion-header>
 
   <ion-range  class="slider" min="0" max="40" step="1" pin="false"  >
-    
+    <ion-icon slot="start"  src="assets/icon/wind.svg"></ion-icon>
     <ion-icon  slot="end" class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Air Speed parameter allows you to influence the ventilator’s intensity.')"></ion-icon>
 
   </ion-range>
@@ -31,7 +31,7 @@
     </ion-range>
  
   <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
-    <ion-icon style="width: 35px; height: 35px;"slot="start"  src="assets/icon/airQuality1.svg"></ion-icon>
+    <ion-icon slot="start"  src="assets/icon/bad-breath.svg"></ion-icon>
   <ion-icon class="infoIcon" slot="end" name="information-circle-outline"  (click)="presentAlert ('Air Quality parameter allows you getting fresh air everytime it is needed.')"></ion-icon>
 </ion-range>
 
