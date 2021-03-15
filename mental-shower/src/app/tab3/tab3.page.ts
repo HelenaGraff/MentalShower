@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab3',
@@ -7,6 +8,12 @@ import { Component } from '@angular/core';
 })
 export class Tab3Page {
 
-  constructor() {}
-
+  constructor(private alertCtrl: AlertController) {}
+  async onIconClick(){
+    const alert = await this.alertCtrl.create ({
+      message:"message"
+     });
+  
+      await alert.present ();
+  }
 }
