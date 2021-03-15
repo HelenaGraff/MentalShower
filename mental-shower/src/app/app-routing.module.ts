@@ -16,6 +16,10 @@ const routes: Routes = [
   {
     path: 'tab5',
     loadChildren: () => import('./tab5/tab5.module').then( m => m.Tab5PageModule)
+  },
+  {
+    path: 'group-info-page',
+    loadChildren: () => import('./group-info-page/group-info-page.module').then( m => m.GroupInfoPagePageModule)
   }
 
 ];
