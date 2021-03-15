@@ -14,23 +14,32 @@
   </ion-header>
 
 
-  <ion-icon name="thermometer-outline"></ion-icon>
 
 
-  <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+
+  
+
+    
+  <ion-range  class="slider" min="0" max="40" step="1" pin="false"  >
+    <ion-icon slot="start" name="thermometer-outline"></ion-icon>
+    <ion-icon  slot="end" class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Air Speed parameter allows you to influence the ventilator’s intensity.')"></ion-icon>
+
   </ion-range>
-      <ion-icon class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Air Speed parameter allows you to influence the ventilator’s intensity.')"></ion-icon>
+
       <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
-      </ion-range>
-     <ion-icon class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Temperature parameter allows you to adjust the degrees in a zone.')"></ion-icon>
       
-     <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+     <ion-icon slot="end" class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Temperature parameter allows you to adjust the degrees in a zone.')"></ion-icon>
     </ion-range>
-  <ion-icon class="infoIcon" name="information-circle-outline"  (click)="presentAlert ('Humidity parameter allows you to adjusts the level of water vapor in the air.')"></ion-icon>
-  <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
-  </ion-range>
-  <ion-icon class="infoIcon" name="information-circle-outline"  (click)="presentAlert ('Air Quality parameter allows you getting fresh air everytime it is needed.')"></ion-icon>
 
+
+     <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+      <ion-icon class="infoIcon" slot="end" name="information-circle-outline"  (click)="presentAlert ('Humidity parameter allows you to adjusts the level of water vapor in the air.')"></ion-icon>
+    </ion-range>
+ 
+  <ion-range class="slider" min="0" max="40" step="1" pin="false"  >
+ 
+  <ion-icon class="infoIcon" slot="end" name="information-circle-outline"  (click)="presentAlert ('Air Quality parameter allows you getting fresh air everytime it is needed.')"></ion-icon>
+</ion-range>
 
   <ion-textarea>
     Click the button below when you are ready to proceed with joining a pre-existing group or simply claim a new spot.
