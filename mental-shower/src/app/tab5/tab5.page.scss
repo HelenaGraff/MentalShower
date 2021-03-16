@@ -10,9 +10,15 @@ ion-title {
 
 ion-card-content {
     font-family: 'Tahoma';
+    margin-bottom: 10%;
 }
 
 ion-toolbar {
 
     padding-bottom:5%;
+}
+
+selected-tab {
+    
+    --color: #6EA81A;
 }
