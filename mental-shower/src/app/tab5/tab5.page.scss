@@ -1,9 +1,18 @@
 ion-title {
-    font-family: 'Rozanova';
+    font-family: 'Tahoma';
     font-style: normal;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 100%;
     text-align: center;
     display: block;
     color: #000000;
     }
+
+ion-card-content {
+    font-family: 'Tahoma';
+}
+
+ion-toolbar {
+
+    padding-bottom:5%;
+}

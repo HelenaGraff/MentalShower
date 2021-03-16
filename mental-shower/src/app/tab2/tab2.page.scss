@@ -1,7 +1,13 @@
+ion-toolbar {
+
+    padding-bottom:5%;
+}
+
+
 ion-title {
-    font-family: 'Rozanova';
+    font-family: 'Tahoma';
     font-style: normal;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 100%;
     text-align: center;
     display: block;
@@ -17,7 +23,7 @@ ion-title {
 
 .infoText {
 
-font-family: 'Rozanova-thin';
+font-family: 'Tahoma';
 font-style: normal;
 font-weight: normal;
 font-size: 16px;
@@ -47,7 +53,7 @@ color: black;
     align-items: center;
    // padding: 16px 32px;
     font-weight: bold;
-    font-family: 'Rozanova';
+    font-family: 'Tahoma';
     
    // padding-left: 8%;
    // padding-right: 8%;

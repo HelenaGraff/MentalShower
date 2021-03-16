@@ -1,8 +1,14 @@
+ion-toolbar {
+
+  padding-bottom:5%;
+}
+
+
 ion-title {
 
-font-family: 'Rozanova';
+font-family: 'Tahoma';
 font-style: normal;
-font-size: 45px;
+font-size: 40px;
 line-height: 100%;
 text-align: center;
 display: block;
@@ -11,7 +17,7 @@ color: #000000;
 
 
 .ClickMeToStart {
-    font-family: 'Rozanova';
+    font-family: 'Tahoma';
     font-weight: bold;
     display: block;
     align-items: center;
@@ -42,20 +48,20 @@ color: #000000;
     }
 
     .firstNotification {
-      font-family: 'Rozanova-thin';
+      font-family: 'Tahoma';
       margin-top: 10%;
       background: black;
       color: white;
     }
 
     .secondNotification {
-      font-family: 'Rozanova-thin';
+      font-family: 'Tahoma';
       background: black;
       color: white;
     }
 
     .thirdNotification {
-      font-family: 'Rozanova-thin';
+      font-family: 'Tahoma';
       background: black;
       color: white;
     }
