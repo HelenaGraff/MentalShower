@@ -8,17 +8,26 @@ ion-title {
     color: #000000;
     }
 
-ion-card-content {
-    font-family: 'Tahoma';
-    margin-bottom: 10%;
-}
-
 ion-toolbar {
 
-    padding-bottom:5%;
+padding-bottom:5%;
+
+}
+
+ion-card-content {
+    font-family: 'Tahoma';
+    margin-bottom: 0%;
 }
 
 selected-tab {
     
     --color: #6EA81A;
+}
+
+.aboutApp {
+font-size: x-small;
+font-family:'Tahoma';
+text-align: center;
+
+     
 }
