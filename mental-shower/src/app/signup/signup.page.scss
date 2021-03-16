@@ -1,0 +1,36 @@
+.googleLogIn{
+    
+    width: 70%;
+    display:block;
+    margin:auto;
+    --border-radius:3px;
+}
+
+.facebookLogIn{
+    
+    width: 70%;
+    display:block;
+    margin:auto;
+    --border-radius:3px;
+}
+
+.signupButton{
+    width: 70%;
+    display:block;
+    margin:auto;
+    --border-radius:3px;
+    color:white;
+    font-weight: bold;
+}
+
+ion-input{
+    display: block;
+    margin: 3% auto 3%;
+    width: 70%;
+    padding-inline-start: 20px;
+    background: #EFEFEF;
+    border: 1px solid #C7C6C6;
+    box-sizing: border-box;
+    border-radius: 8px;
+    --padding-start:20px;
+}

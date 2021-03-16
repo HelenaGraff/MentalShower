@@ -20,6 +20,10 @@ const routes: Routes = [
   {
     path: 'group-info-page',
     loadChildren: () => import('./group-info-page/group-info-page.module').then( m => m.GroupInfoPagePageModule)
+  },
+  {
+    path: 'signup',
+    loadChildren: () => import('./signup/signup.module').then( m => m.SignupPageModule)
   }
 
 ];
