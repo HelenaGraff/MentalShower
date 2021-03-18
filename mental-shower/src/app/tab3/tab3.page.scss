@@ -18,6 +18,8 @@ ion-icon {
      display: block;
      margin-left: auto;
      margin-right: auto;
+     padding-right: 5%;
+     padding-left: -10%;
 
 }
 
@@ -41,4 +43,9 @@ ion-card-content{
 
     font-family: 'Tahoma';
 
+}
+
+ion-card-title {
+
+    padding-left: 5%;
 }
