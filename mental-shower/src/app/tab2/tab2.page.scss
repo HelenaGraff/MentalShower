@@ -44,16 +44,17 @@ color: black;
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
-    margin-top: 5%;
-    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 65%, rgba(255,255,255,1) 65%);
+    margin-top: -5%;
+    margin-bottom: -4%;
+    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 65%,  rgb(218, 212, 212) 65%);
 }
 .slider2{
    
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
-    margin-top: 5%;
-    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 69%, rgba(255,255,255,1) 69%);
+    margin-top: -2%;
+    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 69%, rgb(218, 212, 212) 69%);
 }
 .slider3{
    
@@ -61,7 +62,7 @@ color: black;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
     margin-top: 5%;
-    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 25%, rgba(255,255,255,1) 25%);
+    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 25%,  rgb(218, 212, 212) 25%);
 }
 .slider4{
    
@@ -69,43 +70,26 @@ color: black;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
     margin-top: 5%;
-    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 95%, rgba(255,255,255,1) 95%);
+    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 95%,  rgb(218, 212, 212) 95%);
 }
-
-
 
 
 .startButton {
 
     display: block;
     align-items: center;
-   // padding: 16px 32px;
     font-weight: bold;
     font-family: 'Tahoma';
-    
-   // padding-left: 8%;
-   // padding-right: 8%;
+
     margin-bottom: 20%;
     margin-left: 25%;
     margin-right: 25%;
 
     background: #6EA81A;
-    border-radius: 100px;
-   
-
-    /*
-    width: 104px;
-    height: 51px;
-    left: 135px;
-    top: 578px;
-
-    */
-    
-    
+    border-radius: 100px;      
     }
 
     ion-button{
-
         font-family: 'Tahoma';
     }
 
@@ -118,4 +102,36 @@ color: black;
         --bar-height:20px;
         --bar-border-radius:20px;
         --bar-background-active: #a81aa8;
+    }
+
+    .currentMood{
+        width:20px;
+        height:20px; 
+        margin-left: 220px; 
+        transform: rotate(90deg);
+        color: rgba(142,25,168,1);
+    }
+
+    .preferenceMood{
+        display:block;
+        width:20px;
+        height:20px;
+        margin-left: 185px;
+        transform: rotate(-90deg);
+        color: #6EA81A;
+    }
+
+    .currentMoodText{
+        font-size: 10px;
+        color: rgba(142,25,168,1);
+        font-weight: bold;
+        margin-left: 180px;
+        margin-top: 30px;
+    }
+
+    .preferenceMoodText{
+        font-size: 10px;
+        color: #6EA81A;
+        font-weight: bold;
+        margin-left: 160px;
     }
