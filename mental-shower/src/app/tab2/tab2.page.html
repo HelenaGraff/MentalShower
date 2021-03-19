@@ -1,17 +1,10 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Mood
-    </ion-title>
+  <ion-toolbar style="margin-top: 5%;">
+    <ion-title size="large">Mood</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Mood</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [scrollEvents]="true">
 
  
    <ion-range  class="slider1" value="30" min="0" max="40" step="1" pin="false"  > 
