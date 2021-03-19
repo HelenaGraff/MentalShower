@@ -39,8 +39,7 @@ color: black;
 
 
 
-.slider1{
-   
+.slider1{  
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
@@ -49,15 +48,13 @@ color: black;
     --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 65%,  rgb(218, 212, 212) 65%);
 }
 .slider2{
-   
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
     margin-top: -2%;
-    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 69%, rgb(218, 212, 212) 69%);
+    --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 75%, rgb(218, 212, 212) 75%);
 }
 .slider3{
-   
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
@@ -65,7 +62,6 @@ color: black;
     --bar-background: linear-gradient(90deg, rgba(142,25,168,1) 25%,  rgb(218, 212, 212) 25%);
 }
 .slider4{
-   
     --bar-height:22px;
     --bar-border-radius:20px;
     --bar-background-active: #6EA81A;
@@ -91,17 +87,6 @@ color: black;
 
     ion-button{
         font-family: 'Tahoma';
-    }
-
-    .ranger{
-       margin-top: 5%;
-        background-color: red;
-        z-index: -10;
-        height: 20px;
-        border-radius: 20px;
-        --bar-height:20px;
-        --bar-border-radius:20px;
-        --bar-background-active: #a81aa8;
     }
 
     .currentMood{
