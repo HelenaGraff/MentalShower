@@ -13,7 +13,8 @@ import { LoginPagePage } from './login-page.page';
     CommonModule,
     FormsModule,
     IonicModule,
-    LoginPagePageRoutingModule
+    LoginPagePageRoutingModule,
+
   ],
   declarations: [LoginPagePage]
 })

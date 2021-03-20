@@ -4,10 +4,13 @@
 
 
 
-      <ion-input placeholder="Email" type="email" class="centeredContent"></ion-input>
-      <ion-input placeholder="Password" type="password" class="centeredContent"></ion-input>
-            <ion-button class='loginButton' color="logo-green">
-                 <div style="color:white">Log In</div> 
+      <ion-input placeholder="Email" [(ngModel)]="email" type="email" class="centeredContent"></ion-input>
+      <ion-input placeholder="Password" [(ngModel)]="pass" type="password" class="centeredContent"></ion-input>
+
+      <ion-button class='loginButton' color="logo-green">
+                 <div style="color:white" (click)="signIn()" >Log In</div> 
             </ion-button>
+
+            <a routerLink="/forgot" class="forgot">Forgot Password</a>  
       
 </ion-content>
