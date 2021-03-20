@@ -21,8 +21,6 @@ import { Tab3PageRoutingModule } from './tab3-routing.module';
 })
 export class Tab3PageModule {
 
-  onIconClick(){
-    
-  }
+  
 
 }
