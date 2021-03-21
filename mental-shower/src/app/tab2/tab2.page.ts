@@ -14,6 +14,7 @@ export class Tab2Page {
 
   async presentAlert(msg:string) {
     const alert = await this.alertCtrl.create ({
+      
     message: msg
    });
 

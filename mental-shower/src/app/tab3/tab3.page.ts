@@ -4,6 +4,7 @@ import { ModalController } from '@ionic/angular';
 import {GroupInfoComponent} from 'src/app/group-info/group-info.component';
 import {GroupInfoPagePage} from 'src/app/group-info-page/group-info-page.page';
 import {ZonesPage} from 'src/app/zones/zones.page';
+import {FirebaseService} from 'src/app/firebase.service';
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
@@ -11,7 +12,25 @@ import {ZonesPage} from 'src/app/zones/zones.page';
 })
 export class Tab3Page {
 
-  constructor(private alertCtrl: AlertController, private modalController: ModalController) {}
+  public student:any;
+
+  constructor(private alertCtrl: AlertController, private modalController:ModalController, private firebaseService:FirebaseService) {
+
+console.log(firebaseService.read_student("mgb0t9h9RzyOOk2dI8B1"));
+ this.student=firebaseService.read_student("mgb0t9h9RzyOOk2dI8B1");
+ console.log(this.student["First Name"]);
+
+ var students=firebaseService.read_students();
+ (students.snapshotChanges().subscribe(res=>{
+console.log();
+res.forEach(student=>{
+console.log(student.payload.doc.data().FirstName);
+});
+
+
+ }));
+}
+  
  
 
   async onIconClick() {
@@ -33,3 +52,5 @@ async ChooseClassroom() {
   return await modal.present();
 }
 }
+
+
