@@ -25,6 +25,10 @@
     "@ionic-native/facebook": "^5.31.1",
     "@ionic/angular": "^5.5.2",
     "angular": "^1.8.2",
+    "cordova-android": "9.0.0",
+    "cordova-browser": "6.0.0",
+    "cordova-ios": "6.2.0",
+    "firebase": "^8.3.1",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
@@ -43,6 +47,13 @@
     "@types/jest": "^26.0.20",
     "@types/node": "^12.11.1",
     "codelyzer": "^6.0.0",
+    "cordova-plugin-device": "^2.0.2",
+    "cordova-plugin-facebook-connect": "^2.1.0",
+    "cordova-plugin-ionic-keyboard": "^2.2.0",
+    "cordova-plugin-ionic-webview": "^4.2.1",
+    "cordova-plugin-splashscreen": "^5.0.2",
+    "cordova-plugin-statusbar": "^2.4.2",
+    "cordova-plugin-whitelist": "^1.3.3",
     "jasmine-core": "~3.6.0",
     "jasmine-spec-reporter": "~5.0.0",
     "karma": "~5.2.0",
@@ -56,5 +67,31 @@
     "tslint": "~6.1.0",
     "typescript": "~4.0.2"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-statusbar": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-ionic-keyboard": {},
+      "cordova-plugin-facebook-connect": {
+        "APP_ID": "142617884440033",
+        "APP_NAME": "Vent2learn",
+        "FACEBOOK_URL_SCHEME_SUFFIX": " ",
+        "FACEBOOK_AUTO_LOG_APP_EVENTS": "true",
+        "FACEBOOK_HYBRID_APP_EVENTS": "false",
+        "FACEBOOK_ADVERTISER_ID_COLLECTION": "true",
+        "FACEBOOK_ANDROID_SDK_VERSION": "9.0.0",
+        "FACEBOOK_IOS_SDK_VERSION": "9.0.1",
+        "FACEBOOK_BROWSER_SDK_VERSION": "v9.0"
+      }
+    },
+    "platforms": [
+      "browser",
+      "ios",
+      "android"
+    ]
+  }
 }

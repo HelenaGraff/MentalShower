@@ -45,5 +45,14 @@ return studentFinal;
 
 
 }
+
+
+public add_student(student:Student){
+  this.firestore.collection("Students").add(student);
+}
+
+public add_student_with_id(student:Student, uid:string){
+  this.firestore.collection("Students").doc(uid).set(student);
+}
 }
 

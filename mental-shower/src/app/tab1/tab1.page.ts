@@ -10,7 +10,7 @@ export class Tab1Page {
   constructor(firebase:FirebaseService) {
    
 
-   this.firstName=firebase.read_student("1234").FirstName;
+  
   }
 
 }

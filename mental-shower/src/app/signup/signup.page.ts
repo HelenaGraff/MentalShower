@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
+
 
 @Component({
   selector: 'app-signup',
@@ -8,14 +10,14 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 })
 export class SignupPage implements OnInit {
 
-  constructor(private fb: Facebook) { }
+  constructor(private fb: Facebook, private router:Router) { }
 
   ngOnInit() {
   }
 
   SignUpFacebook() {
 this.fb.login(['public_profile', 'user_friends', 'email'])
-  .then((res: FacebookLoginResponse) => console.log('Logged into Facebook!', res))
+  .then((res: FacebookLoginResponse) =>{ console.log('Logged into Facebook!', res); this.router.navigate(['/tabs/tab4']);})
   .catch(e => console.log('Error logging into Facebook', e));
 
 
