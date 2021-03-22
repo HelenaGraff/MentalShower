@@ -8,6 +8,8 @@ import { ZonesPageRoutingModule } from './zones-routing.module';
 
 import { ZonesPage } from './zones.page';
 
+import {ZoneTableComponent} from 'src/app/zone-table/zone-table.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { ZonesPage } from './zones.page';
     IonicModule,
     ZonesPageRoutingModule
   ],
-  declarations: [ZonesPage]
+  declarations: [ZonesPage, ZoneTableComponent]
 })
 export class ZonesPageModule {}

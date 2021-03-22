@@ -1,0 +1,58 @@
+.Avatar1 {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 40px;
+    margin-top: 50px;
+
+    }
+
+.Avatar2 {
+   display: inline-block;
+    float: right;
+    margin-left: auto;
+    margin-right: 185px;
+    margin-top: 50px;
+}
+
+.Avatar3 {
+    display: inline-block;
+    margin-left: 35px;
+    margin-right: 0px;
+    }
+
+ .Avatar4 {
+    display: inline-block;
+    float: right;
+    margin-left: 40px;
+    margin-right: 185px;
+}
+
+
+        .zoneCard{
+
+            margin-left: 15px;
+            margin-right: auto;
+            height: 90px;
+            width: 150px;
+            border-radius: 10px;
+            margin-bottom: 5%;
+        }
+
+    
+
+ion-avatar{
+
+    width:32px;
+    height:32px;
+}
+
+ion-range{
+
+    --knob-size:0px;
+    --bar-height:25px;
+    pointer-events: none;
+    --bar-border-radius:20px;
+      --bar-background-active: #6EA81A;
+      margin-top:-5%;
+      
+  }

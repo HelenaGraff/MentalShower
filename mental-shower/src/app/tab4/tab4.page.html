@@ -4,6 +4,12 @@
   </ion-toolbar>
 </ion-header>
 
+<div class="my-overlay" padding [hidden]="overlayHidden">
+  <div class="overlayText">
+   You need to Log In to access this page. Press 
+   <div class="clickHere" on (click)="hideOverlay()">here</div> to proceed.</div>
+</div>
+
 <ion-content [scrollEvents]="true">
 
   <ion-fab  horizontal="end" vertical="bottom" slot="fixed" >
@@ -26,8 +32,7 @@
   margin-left: 70%; padding-top: 2%;">
   <ion-icon name="create-outline" style="width: 19px; height: 19px;"></ion-icon>
   </div>
-  
-  <ion-button shape="round" color="logo-green" class="joinButton" style="margin-left: 32%; margin-top: 5%;" ><div style="color:white">Edit info</div> </ion-button>
+  <br>
   <div style="font-size: large; margin-left: 10%; margin-top: 5%; margin-bottom: 2%;">Your Preferences</div>
 
   <ion-list>

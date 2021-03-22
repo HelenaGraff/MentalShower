@@ -42,3 +42,35 @@ label{
 .typeHeader{
     margin-top: 10px;
 }
+
+.my-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.507);
+    z-index: 20;
+    top: 0;
+    left: 0;
+  }
+
+  .overlayText {
+    font-family: 'Tahoma';
+    font-weight: bold;
+    font-size: larger;
+    z-index: 20px;
+    margin-top: 165%;
+    margin-bottom: 20%;
+    margin-left: 10%;
+    background-color: transparent;
+    color: white;
+    border-radius: 100px;
+    float: left;
+
+  }
+
+  .clickHere{
+      font-weight: bold;
+      text-decoration-line: underline !important;
+      display: inline-block;
+      color:blue;
+  }

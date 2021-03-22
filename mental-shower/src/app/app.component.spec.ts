@@ -2,13 +2,14 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { TestBed, waitForAsync } from '@angular/core/testing';
 
 import { AppComponent } from './app.component';
+import { ZoneTableComponent } from './zone-table/zone-table.component';
 
 describe('AppComponent', () => {
 
   beforeEach(waitForAsync(() => {
 
     TestBed.configureTestingModule({
-      declarations: [AppComponent],
+      declarations: [AppComponent, ZoneTableComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA],
     }).compileComponents();
   }));
