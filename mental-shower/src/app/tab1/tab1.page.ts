@@ -13,24 +13,20 @@ export class Tab1Page {
 
   constructor(firebase:FirebaseService,public storage:Storage) {
     storage.create();
-
-    
-
-  
   }
 
-  ionViewDidLoad() {
-    
+  ionViewDidLoad() 
+  {  
 
   }
 
-  ionTabsWillChange(){
-   
-    
+  ionTabsWillChange()
+  { 
     
   }
 
-  ionViewDidEnter() {
+  ionViewDidEnter() 
+  {
     console.log("TabX is exited");
     this.storage.get("loggedIn").then(res=>{
       if (res==true){

@@ -10,16 +10,20 @@ import {Storage} from '@ionic/storage-angular';
 export class Tab4Page implements OnInit {
 
   firstName:string;
+  profilePictureUrl:string;
 
   constructor(firebase:FirebaseService,public storage:Storage) {
-      storage.create();    
+      storage.create(); 
     }
 
   ngOnInit() {
   }
 
 
-  ionViewDidEnter() {
+  ionViewDidEnter() 
+  { 
+    this.ionGetProfilePicture();
+
     console.log("TabX is exited");
     this.storage.get("loggedIn").then(res=>{
       if (res==true){
@@ -31,5 +35,14 @@ export class Tab4Page implements OnInit {
         this.firstName="Hi there";
       }
     })
+  }
+
+  ionGetProfilePicture()
+  {
+    this.storage.get("pictureUrl").then(res=>
+      {this.profilePictureUrl = res}
+
+    );   
+
   }
 }

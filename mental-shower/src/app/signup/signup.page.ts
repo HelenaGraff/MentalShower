@@ -42,10 +42,6 @@ export class SignupPage implements OnInit {
 
      },res.id);
    }));
-
-    
-  
-  
   })
   .catch(e => console.log('Error logging into Facebook', e));
 
@@ -60,8 +56,7 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
   var promise=new Promise((resolve,reject)=>{
 
     this.fb.api('/' + userid + '/?fields=id,email,name,picture', ['public_profile'])
-    .then(res=>{
-      
+    .then(res=>{  
       if (res!=null){
         
         resolve(res);
@@ -73,7 +68,7 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
       reject();
       
     });
-   
+
   });
   return promise;
 }
@@ -93,8 +88,5 @@ data:{
   url:string;
   width:number;
 }
-
-    
-    
 
 }
