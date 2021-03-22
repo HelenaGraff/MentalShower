@@ -42,7 +42,7 @@ export class SignupPage implements OnInit {
 
      },res.id);
    }).finally(()=>{
-    this.router.navigate(['/tabs/tab4']);
+    this.router.navigate(['/tabs/tab1']);
    }));
   })
   .catch(e => console.log('Error logging into Facebook', e));
