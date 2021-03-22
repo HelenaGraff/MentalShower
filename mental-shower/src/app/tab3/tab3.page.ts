@@ -3,6 +3,7 @@ import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import {GroupInfoComponent} from 'src/app/group-info/group-info.component';
 import {GroupInfoPagePage} from 'src/app/group-info-page/group-info-page.page';
+import {ZonesPage} from 'src/app/zones/zones.page';
 import {FirebaseService} from 'src/app/firebase.service';
 @Component({
   selector: 'app-tab3',
@@ -41,6 +42,15 @@ console.log(student.payload.doc.data().FirstName);
   }
 
 
+
+async ChooseClassroom() {
+
+  console.log ('blabla');
+   const modal = await this.modalController.create ({
+     component: ZonesPage,
+});
+  return await modal.present();
+}
 }
 
 

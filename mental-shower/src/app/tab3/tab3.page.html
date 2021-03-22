@@ -21,7 +21,7 @@
       </ion-item>
       <ion-card-content>UX Class</ion-card-content>
 
-    <ion-button shape="round" color="logo-green" class="joinButton" ><div style="color:white">Choose</div> </ion-button>
+    <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()" ><div style="color:white">Choose</div> </ion-button>
     </ion-card-header>
   </ion-card>
 
@@ -38,7 +38,7 @@
       </ion-item>
       <ion-card-content>Database Class</ion-card-content>
 
-    <ion-button shape="round" color="logo-green" class="joinButton" ><div style="color:white">Choose</div> </ion-button>
+    <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()" ><div style="color:white">Choose</div> </ion-button>
     </ion-card-header>
   </ion-card>
   <ion-card>
@@ -55,7 +55,7 @@
       <ion-card-content>Frontend & Backend Class</ion-card-content>
       
 
-    <ion-button shape="round"  routerLink="/tabs/tab4" color="logo-green" class="joinButton" ><div style="color:white">Choose</div> </ion-button>
+    <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()"><div style="color:white">Choose</div> </ion-button>
     </ion-card-header>
   </ion-card>
 </ion-content>

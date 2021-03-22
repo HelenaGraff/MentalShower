@@ -1,0 +1,47 @@
+
+ion-title {
+    font-family: 'Tahoma';
+    font-style: normal;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    display: block;
+    color: #000000;
+    }
+
+
+ion-grid {
+
+    padding-top: 10%;
+    padding-bottom: 20%;
+
+}
+
+ion-col {
+border: 2px solid #000000;
+border-radius: 20px;
+width: 500px;
+
+}
+
+.Column1 {
+margin-left: 2%;
+margin-right: 2%;
+padding-bottom: 5%;
+    }
+
+.Column2 {
+    margin-top: 10%;
+    margin-right: 2%;
+    margin-left: 2%;
+    padding-bottom: 5%;
+
+}
+
+
+ion-avatar{
+        max-width: 40px;
+        max-height: 40px;
+        
+
+}
