@@ -24,12 +24,14 @@ export class SignupPage implements OnInit {
   .then((res: FacebookLoginResponse) =>{ 
 
     //SUCCESFUL FACEBOOK LOGIN
-   (this.getUserDetail(res.authResponse.userID).then(res=>{
-
+   (this.getUserDetail(res.authResponse.userID).then(res=>{  
     
      this.storage.set("name",res.name);
      this.storage.set("userId",res.id);
      this.storage.set("loggedIn",true);
+
+     console.log('Logged into Facebook!', res); 
+     this.router.navigate(['/tabs/tab4']);
     
      this.firebase.add_student_with_id({
        FirstName:res.name.split(" ")[0],
@@ -40,9 +42,7 @@ export class SignupPage implements OnInit {
      },res.id);
    }));
 
-    console.log('Logged into Facebook!', res); 
-    this.router.navigate(['/tabs/tab4']);
-  
+    
   
   
   })
@@ -72,10 +72,7 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
       reject();
       
     });
-    
-
-
-    
+   
   });
   return promise;
 }
