@@ -28,6 +28,12 @@ export class Tab4Page implements OnInit {
   }
 
 
+  logoutButton(){
+    console.log("Pressing the logout button")
+    this.storage.clear();
+    this.router.navigate(["signup"]);
+  }
+
   ionViewWillEnter() 
   { 
     this.ionGetProfilePicture();
