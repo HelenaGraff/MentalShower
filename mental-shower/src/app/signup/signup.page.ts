@@ -30,6 +30,7 @@ export class SignupPage implements OnInit {
      this.storage.set("name",res.name);
      this.storage.set("userId",res.id);
      this.storage.set("loggedIn",true);
+     this.storage.set("pictureUrl",res.picture.data.url);
     
      this.firebase.add_student_with_id({
        FirstName:res.name.split(" ")[0],
