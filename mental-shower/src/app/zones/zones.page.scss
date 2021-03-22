@@ -38,10 +38,17 @@ padding-bottom: 5%;
 
 }
 
-
-ion-avatar{
+ion-avatar {
         max-width: 40px;
         max-height: 40px;
-        
+    
+}
+
+ion-icon {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-right: 5%;
+    padding-left: -5%;
 
 }

@@ -12,26 +12,26 @@ import {FirebaseService} from 'src/app/firebase.service';
 })
 export class Tab3Page {
 
-  public student:any;
+  public student: any;
 
-  constructor(private alertCtrl: AlertController, private modalController:ModalController, private firebaseService:FirebaseService) {
+  constructor(private alertCtrl: AlertController, private modalController: ModalController, private firebaseService: FirebaseService) {
 
-console.log(firebaseService.read_student("mgb0t9h9RzyOOk2dI8B1"));
- this.student=firebaseService.read_student("mgb0t9h9RzyOOk2dI8B1");
- console.log(this.student["First Name"]);
+console.log(firebaseService.read_student('mgb0t9h9RzyOOk2dI8B1'));
+this.student = firebaseService.read_student('mgb0t9h9RzyOOk2dI8B1');
+console.log(this.student['First Name']);
 
- var students=firebaseService.read_students();
- (students.snapshotChanges().subscribe(res=>{
+var students = firebaseService.read_students();
+(students.snapshotChanges().subscribe(res => {
 console.log();
-res.forEach(student=>{
+res.forEach(student => {
 console.log(student.payload.doc.data().FirstName);
 });
 
 
  }));
 }
-  
- 
+
+
 
   async onIconClick() {
     const modal = await this.modalController.create({
@@ -46,7 +46,7 @@ console.log(student.payload.doc.data().FirstName);
 async ChooseClassroom() {
 
   console.log ('blabla');
-   const modal = await this.modalController.create ({
+  const modal = await this.modalController.create ({
      component: ZonesPage,
 });
   return await modal.present();
