@@ -4,11 +4,11 @@
   </ion-toolbar>
 </ion-header>
 
-<div class="my-overlay" padding [hidden]="overlayHidden">
+<!-- <div class="my-overlay" padding [hidden]="overlayHidden">
   <div class="overlayText">
    You need to login to access this page. Press 
    <div class="clickHere" on (click)="hideOverlay()">here</div> to proceed.</div>
-</div>
+</div> -->
 
 <ion-content [scrollEvents]="true">
 
@@ -49,11 +49,11 @@
     </ion-item>
 
     <ion-item>
-    <ion-range class="slider3" min="0" max="40" step="1" pin="false"  >
+    <ion-range class="slider3" min="0" max="40" step="1" pin="false" style="margin-left: 39px; margin-top: -25px;" >
       <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
   </ion-range>
  
-  <ion-range class="slider4" min="0" max="40" step="1" pin="false"  >
+  <ion-range class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
     <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
   </ion-range>
   </ion-item>

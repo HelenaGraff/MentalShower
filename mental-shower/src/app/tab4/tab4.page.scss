@@ -77,3 +77,8 @@ label{
       display: inline-block;
       color:blue;
   }
+
+  ion-range{
+    --bar-background-active: #6EA81A;
+    --knob-size: 10px;
+  }
