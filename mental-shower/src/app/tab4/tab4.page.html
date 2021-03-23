@@ -22,11 +22,16 @@
   </ion-fab-list>
 </ion-fab>
 
+<<<<<<< Updated upstream
   <ion-avatar style="height: 100px; width: 100px; margin-top: -30px; margin-left: 6px;" >
+=======
+  <ion-avatar style="height: 100px; width: 100px; margin-top: 25px; margin-left: 135px;">
+>>>>>>> Stashed changes
     <img src={{profilePictureUrl}}>
   </ion-avatar>  
 
   <div style= "margin-left: 36%; margin-top: 5%;">{{firstName}}</div>
+<<<<<<< Updated upstream
 
   <div style="border-radius: 500px;background-color: #EFEFEF; height: 5%; width: 10%; margin: auto; margin-top: -7%;
   margin-left: 70%; padding-top: 2%;">
@@ -34,25 +39,49 @@
   </div>
   <br>
   <div style="font-size: large; margin-left: 10%; margin-top: 5%; margin-bottom: 2%;">Your Preferences</div>
+=======
+  
+<div style="font-size: large; margin-left: 10%; margin-top: 5%; margin-bottom: 2%;">Your Preferences</div>
+>>>>>>> Stashed changes
 
   <ion-list>
+    <ion-item lines="none">
+    <ion-avatar>
+      <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
+    </ion-avatar>
+
+    <ion-range  class="slider1" value="20" min="0" max="40" step="1" pin="false">
+      <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
+    </ion-range>
+
+
+    <ion-range class="slider2" min="0" max="40" step="1" pin="false"  >
+      <ion-icon  slot="start" size="small" style="margin-right: 25px" name="thermometer-outline"></ion-icon>
+      <ion-icon (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    </ion-range>
+
+    </ion-item>
+
     <ion-item>
-    <ion-avatar>
-      <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
-    </ion-avatar>
-    <ion-icon style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    <ion-range class="slider3" min="0" max="40" step="1" pin="false"  >
+      <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
+  </ion-range>
+ 
+  <ion-range class="slider4" min="0" max="40" step="1" pin="false"  >
+    <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
+  </ion-range>
   </ion-item>
   <ion-item>
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
     </ion-avatar>
-    <ion-icon style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    <ion-icon (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
   </ion-item>
   <ion-item>
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
     </ion-avatar>
-    <ion-icon style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    <ion-icon (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 80%; margin-bottom: 5%;" name="close-outline"></ion-icon>
   </ion-item>
   </ion-list>
 
@@ -65,7 +94,7 @@
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
     <label style="font-size: small;">
-      <ion-icon style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
+      <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.12<br/> Belgrade
   </label>
   </ion-item>
@@ -74,7 +103,7 @@
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
     <label style="font-size: small;">
-      <ion-icon style="width:15px;height: 15px; margin-left: 367%; margin-top: 5%;" name="close-outline"></ion-icon>
+      <ion-icon  (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 367%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.13<br/> Copenhagen
   </label>
   </ion-item>
@@ -83,7 +112,7 @@
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
     <label style="font-size: small;">
-      <ion-icon style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
+      <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.14<br/> London
   </label>
   </ion-item>
@@ -98,7 +127,7 @@
       <ion-icon style="width:30px;height: 30px;" name="people-outline"></ion-icon>
     </ion-avatar>
     <label>
-    <ion-icon style="width:15px;height: 15px; margin-left: 525%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    <ion-icon (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 525%; margin-bottom: 5%;" name="close-outline"></ion-icon>
   Group 1 <br/> Christian <br/>Hajnalka<br/> Birenda <br/> Marketa
   </label>
   </ion-item>
@@ -107,7 +136,7 @@
       <ion-icon style="width:30px;height: 30px;" name="people-outline"></ion-icon>
     </ion-avatar>
     <label>
-    <ion-icon style="width:15px;height: 15px; margin-left: 550%; margin-bottom: 5%;" name="close-outline"></ion-icon>
+    <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 550%; margin-bottom: 5%;" name="close-outline"></ion-icon>
     Group 2 <br/> Andrei <br/>Helena<br/> Andreea
   </label>
   </ion-item>
