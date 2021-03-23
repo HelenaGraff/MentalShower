@@ -2,24 +2,27 @@
 
   
     <ion-avatar class="Avatar1">
-      <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+      <img src={{avatar1url}}>
     </ion-avatar>
   
   <ion-avatar class="Avatar2">
-    <img src="https://ionicframework.com/docs/demos/api/avatar/avatar.svg">
+    <img src={{avatar2url}}>
   </ion-avatar>
   
 
   <ion-card class="zoneCard">
-  <ion-card-content> Matching <br>26%</ion-card-content>
+  <ion-card-content> Matching <br>{{matchPercent}}%</ion-card-content>
+  <ion-range min=0 max=100  value={{matchPercent}} ></ion-range>
   </ion-card>
   
     <ion-avatar class="Avatar3">
-      <img src="https://scontent.frke1-1.fna.fbcdn.net/v/t1.0-9/153477497_2506129096357676_3942607842547383038_n.jpg?_nc_cat=100&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=kLzN-aSs6FQAX-EhRqc&_nc_ht=scontent.frke1-1.fna&oh=611832dfb273f710778736bead2c1cec&oe=607C13F4">
+      <img src={{avatar3url}}>
     </ion-avatar>
   
     <ion-avatar class="Avatar4">
-      <img src="https://scontent.frke1-1.fna.fbcdn.net/v/t1.0-9/136676430_747264706201555_2556747391966028488_o.jpg?_nc_cat=109&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=AQ87Ya-QWhgAX8C0G5J&_nc_ht=scontent.frke1-1.fna&oh=741e41b5e802262c7dc1efcc1d809cdf&oe=607E9D97">
+      <img src={{avatar4url}}>
     </ion-avatar>
   
 </ion-grid>
+<ion-button color="logo-green">Join</ion-button>
+
