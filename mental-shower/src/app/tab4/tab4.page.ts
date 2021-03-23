@@ -1,11 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FirebaseService} from 'src/app/firebase.service';
 import {Storage} from '@ionic/storage-angular';
-<<<<<<< Updated upstream
 import { Router } from '@angular/router';
-=======
-import {AlertController} from '@ionic/angular';
->>>>>>> Stashed changes
 
 @Component({
   selector: 'app-tab4',
@@ -18,11 +14,7 @@ export class Tab4Page implements OnInit {
   profilePictureUrl:string;
   overlayHidden: boolean = false;
 
-<<<<<<< Updated upstream
   constructor(firebase:FirebaseService,public storage:Storage, private router:Router) {
-=======
-  constructor(firebase:FirebaseService,public storage:Storage, public alertController: AlertController) {
->>>>>>> Stashed changes
       storage.create(); 
     }
 
@@ -70,17 +62,9 @@ export class Tab4Page implements OnInit {
 
   }
 
-  async OnClickGiveConfirmationAlert()
+  OnClickGiveConfirmationAlert()
   {
-
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header: 'Confirmation',
-      message: 'Are you sure you want to remove this item?',
-      buttons: ['OK', 'Cancel']
-    });
-
-    await alert.present();
+    
   }
 
 
