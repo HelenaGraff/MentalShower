@@ -1,3 +1,7 @@
+ion-toolbar {
+
+  padding-bottom:5%;
+}
 
 ion-title {
     font-family: 'Tahoma';
@@ -37,6 +41,8 @@ ion-range{
 
   .Zone1{
 display: inline-block;
+margin-top: -26px;
+    margin-right: 8px;
 
   }
 
@@ -45,7 +51,7 @@ display: inline-block;
     float: right;
     flex-direction: column;
     margin-right: -40%;
-    margin-top: -162.5%;
+    margin-top: -198.5%;
     
     
       }
