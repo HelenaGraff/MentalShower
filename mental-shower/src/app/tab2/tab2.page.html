@@ -9,13 +9,13 @@
   <div class="currentMoodText">Current indoor climate</div>
   <ion-icon class="currentMood" name="chevron-forward"></ion-icon>
 
-  <ion-range  class="slider1" value="20" min="0" max="40" step="1" pin="false">
+  <ion-range  class="slider1" (ionChange)="rangeChange()" [(ngModel)]="singleValue" value="0" min="0" max="40" step="1" pin="false">
     <ion-icon slot="start" size="large" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
     <ion-icon  slot="end" class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Air Speed parameter allows you to influence the ventilator’s intensity.')"></ion-icon>
   </ion-range>
 
-  <ion-icon class="preferenceMood" name="chevron-forward"></ion-icon>
-  <div class="preferenceMoodText">Your preference</div>
+  <ion-icon class="preferenceMood" id="moodArrow" name="chevron-forward"></ion-icon>
+  <div class="preferenceMoodText" id="moodArrowText">Your preference</div>
 
   <ion-range class="slider2" min="0" max="40" step="1" pin="false"  >
         <ion-icon  slot="start" size="large" style="margin-right: 25px" name="thermometer-outline"></ion-icon>

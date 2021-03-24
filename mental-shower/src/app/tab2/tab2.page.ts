@@ -10,7 +10,15 @@ import { AlertController } from '@ionic/angular';
 export class Tab2Page {
 
   constructor( private alertCtrl: AlertController)
-  {}
+  {
+
+    
+    
+
+  }
+
+  
+  singleValue:number;
 
   async presentAlert(msg:string) {
     const alert = await this.alertCtrl.create ({
@@ -23,6 +31,20 @@ export class Tab2Page {
   }
 
   onStartButton(){
+    
+  }
+
+  ionViewWillEnter(){
+    document.getElementById("moodArrow").setAttribute("style", "display:block; margin-left:" +(this.singleValue*6.2+60).toString()+"px;");
+    document.getElementById("moodArrowText").setAttribute("style", "display:block; margin-left:" +(this.singleValue*6.2+30).toString()+"px;");
+  }
+
+  rangeChange(){
+    
+    console.log (this.singleValue);
+
+    document.getElementById("moodArrow").setAttribute("style", "display:block; margin-left:" +(this.singleValue*6.2+60).toString()+"px;");
+    document.getElementById("moodArrowText").setAttribute("style", "display:block; margin-left:" +(this.singleValue*6.2+30).toString()+"px;");
     
   }
 
