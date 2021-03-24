@@ -16,6 +16,7 @@ export class Tab4Page implements OnInit {
 
   constructor(firebase:FirebaseService,public storage:Storage, private router:Router) {
       storage.create(); 
+      this.profilePictureUrl="src/assets/basic_avatar2.jpg";
     }
 
     public hideOverlay() {
@@ -47,9 +48,9 @@ export class Tab4Page implements OnInit {
         })
       }
       else {
+        this.profilePictureUrl="src/assets/basic_avatar2.jpg";
         this.firstName="Demo Name";
         this.ShowOverlay();
-        this.profilePictureUrl="src\assets\basic_avatar.jpg";
       }
     })
   }
