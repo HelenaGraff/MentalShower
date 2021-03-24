@@ -6,11 +6,16 @@
 
 <ion-content [scrollEvents]="true">
 
-
   <ion-icon name="business-outline" style="width: 25%; height: 25%; margin-bottom: 15px;"></ion-icon>
-  <ion-card style="margin-top: -10%;"> 
+ 
+  <app-classroom-card classroomName="Classroom D3.12" cityName="Belgrade" className="UX class"></app-classroom-card>
+  <app-classroom-card classroomName="Classroom D3.13" cityName="Copenhagen" className="Database class"></app-classroom-card>
+  <app-classroom-card classroomName="Classroom D3.14" cityName="London" className="Front and backend class"></app-classroom-card>
+  
+  <!-- <ion-card style="margin-top: -10%;"> 
     <ion-card-header>
-      <ion-item lines="none">
+
+     <ion-item lines="none">
      <ion-icon slot="start" style="width:40px; height:40px; margin-left:-5%" name="location-outline"></ion-icon>
       <ion-card-title>Classroom D3.12 Belgrade</ion-card-title>
       </ion-item>
@@ -44,5 +49,5 @@
 
     <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()"><div style="color:white">Choose</div> </ion-button>
     </ion-card-header>
-  </ion-card>
+  </ion-card> -->
 </ion-content>

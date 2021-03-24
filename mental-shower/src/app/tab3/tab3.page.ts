@@ -5,6 +5,7 @@ import {GroupInfoComponent} from 'src/app/group-info/group-info.component';
 import {GroupInfoPagePage} from 'src/app/group-info-page/group-info-page.page';
 import {ZonesPage} from 'src/app/zones/zones.page';
 import {FirebaseService} from 'src/app/firebase.service';
+
 @Component({
   selector: 'app-tab3',
   templateUrl: 'tab3.page.html',
