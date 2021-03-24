@@ -75,10 +75,12 @@ label{
       font-weight: bold;
       text-decoration-line: underline !important;
       display: inline-block;
-      color:blue;
+      color: rgba(142,25,168,1);
+      text-shadow: 2px white ;
   }
 
   ion-range{
     --bar-background-active: #6EA81A;
     --knob-size: 10px;
+    --bar-background: rgb(218 212 212);
   }
