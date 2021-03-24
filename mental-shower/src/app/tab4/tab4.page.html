@@ -4,15 +4,15 @@
   </ion-toolbar>
 </ion-header>
 
-<!-- <div class="my-overlay" padding [hidden]="overlayHidden">
+<div class="my-overlay" padding [hidden]="overlayHidden">
   <div class="overlayText">
-   You need to login to access this page. Press 
+   You need to log in to access this page. Press 
    <div class="clickHere" on (click)="hideOverlay()">here</div> to proceed.</div>
-</div> -->
+</div>
 
 <ion-content [scrollEvents]="true">
 
-  <ion-fab  horizontal="end" vertical="bottom" slot="fixed" >
+  <ion-fab [hidden]="!overlayHidden" horizontal="end" vertical="bottom" slot="fixed" >
   <ion-fab-button color="medium">
     <ion-icon style="padding-left:3px"  name="log-out-outline"></ion-icon>
   </ion-fab-button>
@@ -23,7 +23,7 @@
 </ion-fab>
 
   <ion-avatar style="height: 100px; width: 100px; margin-top: 25px; margin-left: 135px;">
-    <img src={{profilePictureUrl}}>
+    <ion-img src={{profilePictureUrl}}></ion-img>
   </ion-avatar>  
 
   <div style= "margin-left: 36%; margin-top: 5%;">{{firstName}}</div>
@@ -36,33 +36,59 @@
       <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
     </ion-avatar>
 
-    <ion-range  class="slider1" value="20" min="0" max="40" step="1" pin="false">
+    <ion-range [hidden]="!overlayHidden" class="slider1" value="20" min="0" max="40" step="1" pin="false">
       <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
     </ion-range>
 
 
-    <ion-range class="slider2" min="0" max="40" step="1" pin="false"  >
+    <ion-range  [hidden]="!overlayHidden" class="slider2" min="0" max="40" step="1" pin="false"  >
       <ion-icon  slot="start" size="small" style="margin-right: 25px" name="thermometer-outline"></ion-icon>
     </ion-range>
 
     </ion-item>
 
-    <ion-item>
+    <ion-item [hidden]="!overlayHidden">
     <ion-range class="slider3" min="0" max="40" step="1" pin="false" style="margin-left: 39px; margin-top: -25px;" >
       <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
   </ion-range>
  
-  <ion-range class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
+  <ion-range [hidden]="!overlayHidden" class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
     <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
   </ion-range>
   </ion-item>
 
-  <ion-item lines="none">
+  <ion-item [hidden]="!overlayHidden" lines="none">
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
     </ion-avatar>
 
-    <ion-range  class="slider1" value="35" min="0" max="40" step="1" pin="false">
+    <ion-range [hidden]="!overlayHidden" class="slider1" value="35" min="0" max="40" step="1" pin="false">
+      <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
+    </ion-range>
+
+
+    <ion-range [hidden]="!overlayHidden" class="slider2" min="0" max="40" step="1" pin="false"  >
+      <ion-icon  slot="start" size="small" style="margin-right: 25px" name="thermometer-outline"></ion-icon>
+    </ion-range>
+  </ion-item>
+
+  <ion-item [hidden]="!overlayHidden">
+    <ion-range class="slider3" min="0" max="40" step="1" pin="false" style="margin-left: 39px; margin-top: -25px;" >
+      <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
+  </ion-range>
+ 
+  <ion-range [hidden]="!overlayHidden" class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
+    <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
+  </ion-range>
+  </ion-item>
+
+
+  <ion-item [hidden]="!overlayHidden" lines="none">
+    <ion-avatar>
+      <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
+    </ion-avatar>
+
+    <ion-range class="slider1" value="10" min="0" max="40" step="1" pin="false">
       <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
     </ion-range>
 
@@ -72,40 +98,14 @@
     </ion-range>
   </ion-item>
 
-  <ion-item>
-    <ion-range class="slider3" min="0" max="40" step="1" pin="false" style="margin-left: 39px; margin-top: -25px;" >
-      <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
-  </ion-range>
- 
-  <ion-range class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
-    <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
-  </ion-range>
-  </ion-item>
-
-
-  <ion-item lines="none">
-    <ion-avatar>
-      <ion-icon style="width:30px;height: 30px;" name="star-outline"></ion-icon>
-    </ion-avatar>
-
-    <ion-range  class="slider1" value="10" min="0" max="40" step="1" pin="false">
-      <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/wind.svg"></ion-icon>
-    </ion-range>
-
-
-    <ion-range class="slider2" min="0" max="40" step="1" pin="false"  >
-      <ion-icon  slot="start" size="small" style="margin-right: 25px" name="thermometer-outline"></ion-icon>
-    </ion-range>
-  </ion-item>
-
-  <ion-item>
+  <ion-item [hidden]="!overlayHidden">
     <ion-range class="slider3" min="0" max="40" step="1" pin="false" style="margin-left: 39px; margin-top: -25px;" >
       <ion-icon slot="start" size="small" style="margin-right: 25px" name="water-outline"></ion-icon>
       <ion-icon slot="end"  (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 1%; margin-top: 5%;" name="close-outline"></ion-icon>
 
   </ion-range>
  
-  <ion-range class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
+  <ion-range [hidden]="!overlayHidden" class="slider4" min="0" max="40" step="1" pin="false" style="margin-top: -25px" >
     <ion-icon slot="start" size="small" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
   </ion-range>
   </ion-item>
@@ -120,7 +120,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
-    <label style="font-size: small;">
+    <label [hidden]="!overlayHidden" style="font-size: small;">
       <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.12<br/> Belgrade
   </label>
@@ -129,7 +129,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
-    <label style="font-size: small;">
+    <label [hidden]="!overlayHidden" style="font-size: small;">
       <ion-icon  (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 367%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.13<br/> Copenhagen
   </label>
@@ -138,7 +138,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="location-outline"></ion-icon>
     </ion-avatar>
-    <label style="font-size: small;">
+    <label [hidden]="!overlayHidden" style="font-size: small;">
       <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 440%; margin-top: 5%;" name="close-outline"></ion-icon>
       Classroom<br/> D3.14<br/> London
   </label>
@@ -153,7 +153,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="people-outline"></ion-icon>
     </ion-avatar>
-    <label>
+    <label [hidden]="!overlayHidden">
     <ion-icon (click)="OnClickGiveConfirmationAlert()"style="width:15px;height: 15px; margin-left: 525%; margin-bottom: 5%;" name="close-outline"></ion-icon>
   Group 1 <br/> Christian <br/> Hajnalka<br/> Birenda <br/> Marketa
   </label>
@@ -162,7 +162,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="people-outline"></ion-icon>
     </ion-avatar>
-    <label>
+    <label [hidden]="!overlayHidden">
     <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 550%; margin-bottom: 5%;" name="close-outline"></ion-icon>
     Group 2 <br/> Andrei <br/> Helena<br/> Andreea
   </label>
@@ -171,7 +171,7 @@
     <ion-avatar>
       <ion-icon style="width:30px;height: 30px;" name="people-outline"></ion-icon>
     </ion-avatar>
-    <label>
+    <label [hidden]="!overlayHidden">
     <ion-icon (click)="OnClickGiveConfirmationAlert()" style="width:15px;height: 15px; margin-left: 573%; margin-bottom: 5%;" name="close-outline"></ion-icon>
       Group 3 <br/> Isak <br/> Amalie<br/> Borislav <br/> Shimul
   </label>

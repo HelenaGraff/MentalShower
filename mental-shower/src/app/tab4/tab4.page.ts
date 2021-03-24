@@ -49,6 +49,7 @@ export class Tab4Page implements OnInit {
       else {
         this.firstName="Demo Name";
         this.ShowOverlay();
+        this.profilePictureUrl="src\assets\basic_avatar.jpg";
       }
     })
   }
