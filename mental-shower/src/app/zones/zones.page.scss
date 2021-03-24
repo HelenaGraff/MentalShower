@@ -42,20 +42,30 @@ ion-range{
   .Zone1{
     display: inline-block;
     margin-top: -26px;
-    margin-right: 8px;
-    
+    margin-right: 8px;  
 
   }
 
-  .Zone2 {
+  .Zone2{
     display: inline-block;
     float: right;
     flex-direction: column;
     margin-right: -40%;
     margin-top: -198.5%;
     border: 1px solid lightgrey;
-    border-top: 0 !important;
-    border-bottom: 0 !important;
-    
-    
-      }
+    border-top: 0px !important;
+    border-bottom: 0px !important;    
+  }
+
+  hr{
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid lightgrey;
+    margin: 1em 0;
+    padding: 0;
+    padding-top: 10px;
+  }
+
+
+
