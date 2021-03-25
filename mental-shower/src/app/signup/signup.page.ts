@@ -4,6 +4,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import {Storage} from '@ionic/storage-angular';
 import { FirebaseService } from '../firebase.service';
 
+import { SocialAuthService, GoogleLoginProvider, SocialUser } from 'angularx-social-login';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
@@ -11,7 +13,7 @@ import { FirebaseService } from '../firebase.service';
 })
 export class SignupPage implements OnInit {
 
-  constructor(private fb: Facebook, private router:Router, private storage:Storage, private firebase:FirebaseService) {
+  constructor(private fb: Facebook, private router:Router, private storage:Storage, private firebase:FirebaseService, private socialAuthService: SocialAuthService) {
 
     storage.create();
    }
@@ -73,6 +75,10 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
 
   });
   return promise;
+}
+
+loginWithGoogle(){
+  this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
 }
 
 }
