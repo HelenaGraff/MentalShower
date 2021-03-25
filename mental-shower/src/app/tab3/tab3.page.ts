@@ -5,6 +5,7 @@ import {GroupInfoComponent} from 'src/app/group-info/group-info.component';
 import {GroupInfoPagePage} from 'src/app/group-info-page/group-info-page.page';
 import {ZonesPage} from 'src/app/zones/zones.page';
 import {FirebaseService} from 'src/app/firebase.service';
+import { Classroom } from '../classroom';
 
 @Component({
   selector: 'app-tab3',
@@ -14,22 +15,20 @@ import {FirebaseService} from 'src/app/firebase.service';
 export class Tab3Page {
 
   public student: any;
-
+  public rooms:Classroom[];
   constructor(private alertCtrl: AlertController, private modalController: ModalController, private firebaseService: FirebaseService) {
 
-console.log(firebaseService.read_student('mgb0t9h9RzyOOk2dI8B1'));
-this.student = firebaseService.read_student('mgb0t9h9RzyOOk2dI8B1');
-console.log(this.student['First Name']);
+   
+  firebaseService.read_rooms().subscribe(res=>{
+    this.rooms=res.map(e=>{
+      return{
+        id:e.payload.doc.id,
+        ...e.payload.doc.data() as Classroom
+      }
+    })
+  });
 
-var students = firebaseService.read_students();
-(students.snapshotChanges().subscribe(res => {
-console.log();
-res.forEach(student => {
-console.log(student.payload.doc.data().FirstName);
-});
 
-
- }));
 }
 
 

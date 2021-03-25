@@ -8,10 +8,11 @@
 
   <ion-icon name="business-outline" style="width: 25%; height: 25%; margin-bottom: 15px;"></ion-icon>
  
-  <app-classroom-card classroomName="Classroom D3.12" cityName="Belgrade" className="UX class"></app-classroom-card>
-  <app-classroom-card classroomName="Classroom D3.13" cityName="Copenhagen" className="Database class"></app-classroom-card>
-  <app-classroom-card classroomName="Classroom D3.14" cityName="London" className="Front and backend class"></app-classroom-card>
   
+  
+  <div *ngFor="let item of rooms; let i =index">
+   <app-classroom-card classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
+    </div>
   <!-- <ion-card style="margin-top: -10%;"> 
     <ion-card-header>
 

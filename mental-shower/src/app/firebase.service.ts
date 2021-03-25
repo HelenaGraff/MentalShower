@@ -1,6 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Classroom } from './classroom';
 import { Student } from './student';
 import { ZoneTable } from './zone-table';
 
@@ -69,9 +71,20 @@ public update_student_with_id(student:Student,uid:string){
 
 
 
-public read_zones():AngularFirestoreCollection<ZoneTable>{
+public read_zones(){
   return this.firestore.collection("ZoneTable");
 }
+
+public read_classrooms():AngularFirestoreCollection<Classroom>{
+  return this.firestore.collection("ClassRooms");
+}
+
+public read_rooms(){
+  
+  return (this.firestore.collection("ClassRooms").snapshotChanges());
+}
+
+
 
 public async read_zone(uid:string):Promise<ZoneTable>{
   var finalZone:ZoneTable;
