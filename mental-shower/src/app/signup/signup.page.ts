@@ -4,6 +4,8 @@ import { Facebook, FacebookLoginResponse } from '@ionic-native/facebook/ngx';
 import {Storage} from '@ionic/storage-angular';
 import { FirebaseService } from '../firebase.service';
 
+import { SocialAuthService, GoogleLoginProvider, SocialUser } from 'angularx-social-login';
+
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.page.html',
@@ -11,7 +13,7 @@ import { FirebaseService } from '../firebase.service';
 })
 export class SignupPage implements OnInit {
 
-  constructor(private fb: Facebook, private router:Router, private storage:Storage, private firebase:FirebaseService) {
+  constructor(private fb: Facebook, private router:Router, private storage:Storage, private firebase:FirebaseService, private socialAuthService: SocialAuthService) {
 
     storage.create();
    }
@@ -38,7 +40,11 @@ export class SignupPage implements OnInit {
        FirstName:res.name.split(" ")[0],
        LastName:res.name.split(" ")[1],
        Age:0,
-       ProfilePicURL:res.picture.data.url
+       ProfilePicURL:res.picture.data.url,
+       CurrentAirQuality:0,
+      CurrentAirSpeed:0,
+      CurrentHumidity:0,
+      CurrentTemperature:0
 
      },res.id);
    }).finally(()=>{
@@ -73,6 +79,38 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
 
   });
   return promise;
+}
+
+loginWithGoogle(){
+  this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(res=>{
+
+    console.log("successfully logged in with google");
+    console.log(res.name);
+
+
+    this.storage.set("name",res.name);
+     this.storage.set("userId",res.id);
+     this.storage.set("loggedIn",true);
+     this.storage.set("pictureUrl",res.photoUrl);
+
+     this.firebase.add_student_with_id({
+      FirstName:res.firstName,
+      LastName:res.lastName,
+      Age:0,
+      ProfilePicURL:res.photoUrl,
+      CurrentAirQuality:0,
+      CurrentAirSpeed:0,
+      CurrentHumidity:0,
+      CurrentTemperature:0
+
+    },res.id);
+
+  }).catch(res=>{
+  console.log(res);
+  console.log("sad");
+  }).finally(()=>{
+    this.router.navigate(['/tabs/tab1']);
+  });
 }
 
 }

@@ -15,12 +15,32 @@ import { Storage } from '@ionic/storage';
 import { IonicStorageModule } from '@ionic/storage-angular/';
 import { ZoneTableComponent } from './zone-table/zone-table.component';
 
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebase), AngularFireAuthModule, AngularFireDatabaseModule,
-    AngularFirestoreModule, IonicStorageModule, IonicStorageModule.forRoot()],
-  providers: [Facebook, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+    AngularFirestoreModule, IonicStorageModule, IonicStorageModule.forRoot(), SocialLoginModule],
+  providers: [{
+    provide: 'SocialAuthServiceConfig',
+    useValue: {
+      autoLogin: false,
+      providers: [
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider(
+            '1062121084965-h6es6euj24dqq3133ifhscbj2t0bs9gk.apps.googleusercontent.com'
+          )
+        }
+      ]
+    } as SocialAuthServiceConfig,
+  }    ,
+    
+    
+    
+    Facebook, { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }, ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -1,6 +1,8 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
+import { Classroom } from './classroom';
 import { Student } from './student';
 import { ZoneTable } from './zone-table';
 
@@ -28,7 +30,11 @@ student.snapshotChanges().subscribe(ref=>{
  FirstName:ref.payload.data().FirstName,
  LastName:ref.payload.data().LastName,
  Age:ref.payload.data().Age,
- ProfilePicURL:ref.payload.data().ProfilePicURL
+ ProfilePicURL:ref.payload.data().ProfilePicURL,
+ CurrentTemperature:0,
+ CurrentAirSpeed:0,
+ CurrentHumidity:0,
+ CurrentAirQuality:0
   }
 
 })
@@ -55,12 +61,30 @@ public add_student(student:Student){
 }
 
 public add_student_with_id(student:Student, uid:string){
-  this.firestore.collection("Students").doc(uid).set(student);
+  this.firestore.collection("Students").doc("/"+uid).set(student);
+ 
 }
 
-public read_zones():AngularFirestoreCollection<ZoneTable>{
+public update_student_with_id(student:Student,uid:string){
+  this.firestore.collection("Students").doc("/"+uid).update(student);
+}
+
+
+
+public read_zones(){
   return this.firestore.collection("ZoneTable");
 }
+
+public read_classrooms():AngularFirestoreCollection<Classroom>{
+  return this.firestore.collection("ClassRooms");
+}
+
+public read_rooms(){
+  
+  return (this.firestore.collection("ClassRooms").snapshotChanges());
+}
+
+
 
 public async read_zone(uid:string):Promise<ZoneTable>{
   var finalZone:ZoneTable;

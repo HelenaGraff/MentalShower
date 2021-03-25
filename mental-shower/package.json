@@ -28,6 +28,7 @@
     "@ionic/storage": "^3.0.2",
     "@ionic/storage-angular": "^3.0.2",
     "angular": "^1.8.2",
+    "angularx-social-login": "^3.5.4",
     "cordova-android": "9.0.0",
     "cordova-browser": "6.0.0",
     "cordova-ios": "6.2.0",

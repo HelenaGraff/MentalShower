@@ -3,7 +3,7 @@
 <ion-content>
   <img style="margin-top: -20%; margin-bottom: -20%;" src="assets/vent2learn.png">
   <br>
-<ion-button class="googleLogIn" color="medium"><ion-icon name="logo-google" slot="start"></ion-icon> Sign in with Google</ion-button>
+<ion-button class="googleLogIn" (click)="loginWithGoogle()" color="medium"><ion-icon name="logo-google" slot="start"></ion-icon> Sign in with Google</ion-button>
 <br>
 <ion-button class="facebookLogIn" color="facebook-color" (click)="SignUpFacebook()"><ion-icon name="logo-facebook" slot="start"></ion-icon> Sign in with Facebook</ion-button>
 <ion-button class="guestLogIn" [routerLink]="['/tabs/tab1']" color="logo-green"> <ion-icon name="person-circle-outline" slot="start"></ion-icon>

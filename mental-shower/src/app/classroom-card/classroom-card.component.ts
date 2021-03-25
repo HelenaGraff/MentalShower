@@ -17,6 +17,7 @@ export class ClassroomCardComponent implements OnInit {
   @Input("classroomName") classroomName;
   @Input("cityName") cityName;
   @Input("className") className; 
+  @Input("firestoreId") firestoreId;
 
 
   
@@ -25,6 +26,9 @@ async ChooseClassroom() {
   console.log ('blabla');
   const modal = await this.modalController.create ({
      component: ZonesPage,
+     componentProps:{
+       roomId:this.firestoreId
+     }
 });
   return await modal.present();
 }
