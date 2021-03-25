@@ -28,7 +28,11 @@ student.snapshotChanges().subscribe(ref=>{
  FirstName:ref.payload.data().FirstName,
  LastName:ref.payload.data().LastName,
  Age:ref.payload.data().Age,
- ProfilePicURL:ref.payload.data().ProfilePicURL
+ ProfilePicURL:ref.payload.data().ProfilePicURL,
+ CurrentTemperature:0,
+ CurrentAirSpeed:0,
+ CurrentHumidity:0,
+ CurrentAirQuality:0
   }
 
 })
@@ -55,8 +59,15 @@ public add_student(student:Student){
 }
 
 public add_student_with_id(student:Student, uid:string){
-  this.firestore.collection("Students").doc(uid).set(student);
+  this.firestore.collection("Students").doc("/"+uid).set(student);
+ 
 }
+
+public update_student_with_id(student:Student,uid:string){
+  this.firestore.collection("Students").doc("/"+uid).update(student);
+}
+
+
 
 public read_zones():AngularFirestoreCollection<ZoneTable>{
   return this.firestore.collection("ZoneTable");

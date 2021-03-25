@@ -40,7 +40,11 @@ export class SignupPage implements OnInit {
        FirstName:res.name.split(" ")[0],
        LastName:res.name.split(" ")[1],
        Age:0,
-       ProfilePicURL:res.picture.data.url
+       ProfilePicURL:res.picture.data.url,
+       CurrentAirQuality:0,
+      CurrentAirSpeed:0,
+      CurrentHumidity:0,
+      CurrentTemperature:0
 
      },res.id);
    }).finally(()=>{
@@ -93,7 +97,11 @@ loginWithGoogle(){
       FirstName:res.firstName,
       LastName:res.lastName,
       Age:0,
-      ProfilePicURL:res.photoUrl
+      ProfilePicURL:res.photoUrl,
+      CurrentAirQuality:0,
+      CurrentAirSpeed:0,
+      CurrentHumidity:0,
+      CurrentTemperature:0
 
     },res.id);
 
