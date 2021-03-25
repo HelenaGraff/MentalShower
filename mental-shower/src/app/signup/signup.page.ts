@@ -78,7 +78,31 @@ this.fb.logEvent(this.fb.EVENTS.EVENT_NAME_ADDED_TO_CART);
 }
 
 loginWithGoogle(){
-  this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID);
+  this.socialAuthService.signIn(GoogleLoginProvider.PROVIDER_ID).then(res=>{
+
+    console.log("successfully logged in with google");
+    console.log(res.name);
+
+
+    this.storage.set("name",res.name);
+     this.storage.set("userId",res.id);
+     this.storage.set("loggedIn",true);
+     this.storage.set("pictureUrl",res.photoUrl);
+
+     this.firebase.add_student_with_id({
+      FirstName:res.firstName,
+      LastName:res.lastName,
+      Age:0,
+      ProfilePicURL:res.photoUrl
+
+    },res.id);
+
+  }).catch(res=>{
+  console.log(res);
+  console.log("sad");
+  }).finally(()=>{
+    this.router.navigate(['/tabs/tab1']);
+  });
 }
 
 }
