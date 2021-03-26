@@ -2,7 +2,7 @@ import { Component, OnInit, Input, SimpleChange, SimpleChanges, ɵɵpureFunction
 import { FirebaseService } from '../firebase.service';
 import { Student } from '../student';
 import {Storage} from '@ionic/storage-angular';
-import { ModalController } from '@ionic/angular';
+import { AlertController, ModalController } from '@ionic/angular';
 import { GroupInfoPagePage } from '../group-info-page/group-info-page.page';
 import { ZonesPage } from '../zones/zones.page';
 import { NgZone  } from '@angular/core';
@@ -72,7 +72,7 @@ export class ZoneTableComponent implements OnInit {
   
 
   @Input("zoneId") zoneId:string;
-  constructor(public firebaseService:FirebaseService, public storage:Storage, public modalController: ModalController) {
+  constructor(public firebaseService:FirebaseService, public storage:Storage, public modalController: ModalController, public alertController:AlertController) {
     	storage.create();
     this.avatar1url="https://ionicframework.com/docs/demos/api/avatar/avatar.svg";
     this.avatar2url="https://ionicframework.com/docs/demos/api/avatar/avatar.svg";
@@ -214,6 +214,18 @@ this.firebaseService.read_student_with_id(this.student4id)
 
 
 
+}
+
+async saveAlert(){
+  const alert = await this.alertController.create({
+    cssClass: 'my-custom-class',
+    
+    header: 'Confirmation',
+    message: '<img src = "/assets/icon/bad-breath.svg"; width="35px"; height="35px"> Are you sure you want to save the preference?',
+    buttons: ['OK', 'Cancel']
+  });
+
+  await alert.present();
 }
 
 

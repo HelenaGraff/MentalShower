@@ -27,6 +27,20 @@
     margin-right: 185px;
 }
 
+.saveButton{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 12px;
+    margin-top: -35%;
+    
+    text-decoration-line: underline;
+    color: gray;
+    //font-weight: bold;
+  
+    width: fit-content;
+    margin: auto;
+}
+
 
 .zoneCard{
     margin-left: 15px;
@@ -46,12 +60,12 @@ ion-avatar{
 ion-range{
 
     --knob-size:0px;
-    --bar-height:25px;
+    --bar-height:15px;
     pointer-events: none;
     --bar-border-radius:20px;
       --bar-background-active: #6EA81A;
       --bar-background: rgb(218 212 212);
-      margin-top:-5%;
+      margin-top:-15%;
       
   }
 

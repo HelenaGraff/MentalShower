@@ -12,8 +12,10 @@
   
 
   <ion-card class="zoneCard">
+   
   <ion-card-content> Matching <br>{{matchPercent}}%</ion-card-content>
   <ion-range min=0 max=100  value={{matchPercent}} ></ion-range>
+ <div class="saveButton" (click)="saveAlert()"><ion-icon slot="start" color="light" name="save-sharp" style="float: right;" ></ion-icon>Save preferences</div>
   </ion-card>
   
     <ion-avatar class="Avatar3">
