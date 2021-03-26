@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FirebaseService} from 'src/app/firebase.service';
 import {Storage} from '@ionic/storage-angular';
 import { Router } from '@angular/router';
+import {AlertController} from '@ionic/angular';
 
 @Component({
   selector: 'app-tab4',
@@ -14,7 +15,7 @@ export class Tab4Page implements OnInit {
   profilePictureUrl:string;
   overlayHidden: boolean = false;
 
-  constructor(firebase:FirebaseService,public storage:Storage, private router:Router) {
+  constructor(firebase:FirebaseService,public storage:Storage, private router:Router, public alertController: AlertController) {
       storage.create(); 
       this.profilePictureUrl="src/assets/basic_avatar2.jpg";
     }
@@ -64,9 +65,16 @@ export class Tab4Page implements OnInit {
 
   }
 
-  OnClickGiveConfirmationAlert()
+  async OnClickGiveConfirmationAlert()
   {
-    
+    const alert = await this.alertController.create({
+      cssClass: 'my-custom-class',
+      header: 'Confirmation',
+      message: 'Are you sure you want to delete this?',
+      buttons: ['OK', 'Cancel']
+    });
+
+    await alert.present();
   }
 
 
