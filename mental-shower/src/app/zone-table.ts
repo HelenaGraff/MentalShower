@@ -5,4 +5,5 @@ export class ZoneTable {
     Seat2?:string;
     Seat3?:string;
     Seat4?:string;
+    
 }

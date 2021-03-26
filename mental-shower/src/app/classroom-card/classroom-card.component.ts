@@ -12,16 +12,20 @@ export class ClassroomCardComponent implements OnInit {
 
   constructor(private modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+
+
+  }
 
   @Input("classroomName") classroomName;
   @Input("cityName") cityName;
-  @Input("className") className; 
+  @Input("courseName") courseName; 
   @Input("firestoreId") firestoreId;
 
 
   
 async ChooseClassroom() {
+
 
   console.log ('blabla');
   const modal = await this.modalController.create ({
