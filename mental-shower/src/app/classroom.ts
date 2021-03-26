@@ -1,4 +1,4 @@
 export class Classroom {
     id?:string;
-    Name:string;
+    Name?:string;
 }

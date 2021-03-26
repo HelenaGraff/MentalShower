@@ -21,7 +21,13 @@ export class ZonesPage implements OnInit {
   }
   roomId;
   zones:ZoneTable[]
+  zone1:ZoneTable[]
+  zone2:ZoneTable[]
+  
+
   ngOnInit() {
+  let  zone1:ZoneTable[]=[{},{}];
+  let  zone2:ZoneTable[]=[{},{}];
     this.firebaseService.read_zones().ref.where("ClassroomID","==",this.roomId).get().then(res=>{
       console.log("zones:");
     res.forEach(element => {
@@ -35,6 +41,22 @@ export class ZonesPage implements OnInit {
       }
     });
     console.log(this.zones);
+
+    zone1[0]=this.zones[0];
+    zone1[1]=this.zones[1];
+    zone2[0]=this.zones[2];
+    zone2[1]=this.zones[3];
+
+    zone1.forEach(x=>{
+      console.log(x.id);
+    })
+
+    zone2.forEach(x=>{
+      console.log(x.id);
+    })
+
+    this.zone1=zone1;
+    this.zone2=zone2;
     })
 
    
