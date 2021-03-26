@@ -193,7 +193,7 @@ this.firebaseService.read_student_with_id(this.student4id)
       console.log("average:"+avgAvg);
    this.matchPercent=((100*avgAvg)/(currentAirspeed+currentHumidity+currentQuality+currentTemperature));
     //  this.matchPercent=avgAvg;
-      this.matchPercent=Math.trunc(this.matchPercent);
+      this.matchPercent=Math.trunc(this.matchPercent%101);
 
 
     })
