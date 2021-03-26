@@ -11,7 +11,7 @@
   
   
   <div *ngFor="let item of rooms; let i =index">
-   <app-classroom-card classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
+   <app-classroom-card courseName={{item.CourseName}} classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
     </div>
   <!-- <ion-card style="margin-top: -10%;"> 
     <ion-card-header>

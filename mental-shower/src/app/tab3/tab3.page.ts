@@ -21,11 +21,15 @@ export class Tab3Page {
    
   firebaseService.read_rooms().subscribe(res=>{
     this.rooms=res.map(e=>{
+      
       return{
         id:e.payload.doc.id,
         ...e.payload.doc.data() as Classroom
-      }
-    })
+      } as Classroom
+      
+    }
+    );
+    console.log(this.rooms);
   });
 
 
