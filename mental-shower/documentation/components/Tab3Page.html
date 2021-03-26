@@ -1,0 +1,675 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>mental-shower documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">mental-shower documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content component">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Components</li>
+  <li>Tab3Page</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+        <li >
+            <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+        </li>
+        <li >
+            <a href="#styleData" role="tab" id="styleData-tab" data-toggle="tab" data-link="style">Styles</a>
+        </li>
+        <li >
+            <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/tab3/tab3.page.ts</code>
+</p>
+
+
+
+
+
+<section>
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
+        <tbody>
+
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-tab3</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>tab3.page.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>tab3.page.html</code></td>
+            </tr>
+
+
+
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#rooms">rooms</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Public</span>
+                                <a href="#student">student</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#ChooseClassroom">ChooseClassroom</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Async</span>
+                                <a href="#onIconClick">onIconClick</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+    <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(alertCtrl: AlertController, modalController: ModalController, firebaseService: <a href="../injectables/FirebaseService.html">FirebaseService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/tab3/tab3.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>alertCtrl</td>
+                                                  
+                                                        <td>
+                                                                    <code>AlertController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>modalController</td>
+                                                  
+                                                        <td>
+                                                                    <code>ModalController</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>firebaseService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/FirebaseService.html" target="_self" >FirebaseService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+
+
+
+
+    <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="ChooseClassroom"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            ChooseClassroom
+                        </b>
+                        <a href="#ChooseClassroom"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>ChooseClassroom()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="46"
+                            class="link-to-prism">src/app/tab3/tab3.page.ts:46</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="onIconClick"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Async</span>
+                            onIconClick
+                        </b>
+                        <a href="#onIconClick"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>onIconClick()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="36"
+                            class="link-to-prism">src/app/tab3/tab3.page.ts:36</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>    <code>{}</code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+    <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="rooms"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            rooms</b>
+                            <a href="#rooms"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../classes/Classroom.html" target="_self" >Classroom[]</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/tab3/tab3.page.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="student"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Public</span>
+                            student</b>
+                            <a href="#student"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/tab3/tab3.page.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+</div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
+import { AlertController } from &#x27;@ionic/angular&#x27;;
+import { ModalController } from &#x27;@ionic/angular&#x27;;
+import {GroupInfoComponent} from &#x27;src/app/group-info/group-info.component&#x27;;
+import {GroupInfoPagePage} from &#x27;src/app/group-info-page/group-info-page.page&#x27;;
+import {ZonesPage} from &#x27;src/app/zones/zones.page&#x27;;
+import {FirebaseService} from &#x27;src/app/firebase.service&#x27;;
+import { Classroom } from &#x27;../classroom&#x27;;
+
+@Component({
+  selector: &#x27;app-tab3&#x27;,
+  templateUrl: &#x27;tab3.page.html&#x27;,
+  styleUrls: [&#x27;tab3.page.scss&#x27;]
+})
+export class Tab3Page {
+
+  public student: any;
+  public rooms:Classroom[];
+  constructor(private alertCtrl: AlertController, private modalController: ModalController, private firebaseService: FirebaseService) {
+
+   
+  firebaseService.read_rooms().subscribe(res&#x3D;&gt;{
+    this.rooms&#x3D;res.map(e&#x3D;&gt;{
+      return{
+        id:e.payload.doc.id,
+        ...e.payload.doc.data() as Classroom
+      }
+    })
+  });
+
+
+}
+
+
+
+  async onIconClick() {
+    const modal &#x3D; await this.modalController.create({
+      component: GroupInfoPagePage,
+      cssClass: &#x27;my-custom-class&#x27;
+    });
+    return await modal.present();
+  }
+
+
+
+async ChooseClassroom() {
+
+  console.log (&#x27;blabla&#x27;);
+  const modal &#x3D; await this.modalController.create ({
+     component: ZonesPage,
+});
+  return await modal.present();
+}
+}
+
+
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;ion-header [translucent]&#x3D;&quot;true&quot;&gt;
+  &lt;ion-toolbar style&#x3D;&quot;margin-top: 5%;&quot;&gt;
+    &lt;ion-title size&#x3D;&quot;large&quot;&gt;Classroom View&lt;/ion-title&gt;
+  &lt;/ion-toolbar&gt;
+&lt;/ion-header&gt;
+
+&lt;ion-content [scrollEvents]&#x3D;&quot;true&quot;&gt;
+
+  &lt;ion-icon name&#x3D;&quot;business-outline&quot; style&#x3D;&quot;width: 25%; height: 25%; margin-bottom: 15px;&quot;&gt;&lt;/ion-icon&gt;
+ 
+  
+  
+  &lt;div *ngFor&#x3D;&quot;let item of rooms; let i &#x3D;index&quot;&gt;
+   &lt;app-classroom-card classroomName&#x3D;{{item.Name}} firestoreId&#x3D;{{item.id}}&gt;&lt;/app-classroom-card&gt;
+    &lt;/div&gt;
+  &lt;!-- &lt;ion-card style&#x3D;&quot;margin-top: -10%;&quot;&gt; 
+    &lt;ion-card-header&gt;
+
+     &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+     &lt;ion-icon slot&#x3D;&quot;start&quot; style&#x3D;&quot;width:40px; height:40px; margin-left:-5%&quot; name&#x3D;&quot;location-outline&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-card-title&gt;Classroom D3.12 Belgrade&lt;/ion-card-title&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-card-content&gt;UX Class&lt;/ion-card-content&gt;
+
+    &lt;ion-button shape&#x3D;&quot;round&quot; color&#x3D;&quot;logo-green&quot; class&#x3D;&quot;joinButton&quot; (click)&#x3D;&quot;ChooseClassroom()&quot; &gt;&lt;div style&#x3D;&quot;color:white&quot;&gt;Choose&lt;/div&gt; &lt;/ion-button&gt;
+    &lt;/ion-card-header&gt;
+  &lt;/ion-card&gt;
+
+  &lt;ion-card&gt;
+    &lt;ion-card-header&gt;
+
+      &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+     &lt;ion-icon slot&#x3D;&quot;start&quot; style&#x3D;&quot;width:40px; height:40px; margin-left:-5%&quot; name&#x3D;&quot;location-outline&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-card-title&gt;Classroom D3.13 Copenhagen&lt;/ion-card-title&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-card-content&gt;Database Class&lt;/ion-card-content&gt;
+
+    &lt;ion-button shape&#x3D;&quot;round&quot; color&#x3D;&quot;logo-green&quot; class&#x3D;&quot;joinButton&quot; (click)&#x3D;&quot;ChooseClassroom()&quot; &gt;&lt;div style&#x3D;&quot;color:white&quot;&gt;Choose&lt;/div&gt; &lt;/ion-button&gt;
+    &lt;/ion-card-header&gt;
+  &lt;/ion-card&gt;
+  &lt;ion-card&gt;
+    &lt;ion-card-header&gt;
+
+      &lt;ion-item lines&#x3D;&quot;none&quot;&gt;
+     &lt;ion-icon slot&#x3D;&quot;start&quot; style&#x3D;&quot;width:40px; height:40px; margin-left:-5%&quot; name&#x3D;&quot;location-outline&quot;&gt;&lt;/ion-icon&gt;
+      &lt;ion-card-title&gt;Classroom D3.14 &lt;br/&gt;London&lt;/ion-card-title&gt;
+      &lt;/ion-item&gt;
+      &lt;ion-card-content&gt;Frontend &amp; Backend Class&lt;/ion-card-content&gt;
+      
+
+    &lt;ion-button shape&#x3D;&quot;round&quot; color&#x3D;&quot;logo-green&quot; class&#x3D;&quot;joinButton&quot; (click)&#x3D;&quot;ChooseClassroom()&quot;&gt;&lt;div style&#x3D;&quot;color:white&quot;&gt;Choose&lt;/div&gt; &lt;/ion-button&gt;
+    &lt;/ion-card-header&gt;
+  &lt;/ion-card&gt; --&gt;
+&lt;/ion-content&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-styleData">
+                <p class="comment">
+                    <code>tab3.page.scss</code>
+                </p>
+                <pre class="line-numbers"><code class="language-scss">ion-toolbar {
+
+    padding-bottom:5%;
+}
+
+ion-title {
+
+    font-family: &#x27;Tahoma&#x27;;
+    font-style: normal;
+    font-size: 40px;
+    line-height: 100%;
+    text-align: center;
+    display: block;
+    color: #000000;
+    }
+
+ion-icon {
+     display: block;
+     margin-left: auto;
+     margin-right: auto;
+     padding-right: 5%;
+     padding-left: -5%;
+
+}
+
+ion-card-content {
+ 
+font-family: &#x27;Tahoma&#x27;;
+font-size: large;
+padding-left: 23.5%;
+color:black;
+
+}
+
+.joinButton{
+
+    float: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    height:40px;
+    width:100px;
+   
+}
+ 
+ion-button{
+
+    font-family: &#x27;Tahoma&#x27;;
+    font-weight: bold;
+}
+ion-card-content{
+
+    font-family: &#x27;Tahoma&#x27;;
+
+}
+
+ion-card-title {
+    font-size: large;
+    padding-left: 5%;
+}</code></pre>
+    </div>
+
+    <div class="tab-pane fade " id="c-tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><ion-header [translucent]="true">  <ion-toolbar style="margin-top: 5%;">    <ion-title size="large">Classroom View</ion-title>  </ion-toolbar></ion-header><ion-content [scrollEvents]="true">  <ion-icon name="business-outline" style="width: 25%; height: 25%; margin-bottom: 15px;"></ion-icon>       <div *ngFor="let item of rooms; let i =index">   <app-classroom-card classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>    </div>  <!-- <ion-card style="margin-top: -10%;">     <ion-card-header>     <ion-item lines="none">     <ion-icon slot="start" style="width:40px; height:40px; margin-left:-5%" name="location-outline"></ion-icon>      <ion-card-title>Classroom D3.12 Belgrade</ion-card-title>      </ion-item>      <ion-card-content>UX Class</ion-card-content>    <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()" ><div style="color:white">Choose</div> </ion-button>    </ion-card-header>  </ion-card>  <ion-card>    <ion-card-header>      <ion-item lines="none">     <ion-icon slot="start" style="width:40px; height:40px; margin-left:-5%" name="location-outline"></ion-icon>      <ion-card-title>Classroom D3.13 Copenhagen</ion-card-title>      </ion-item>      <ion-card-content>Database Class</ion-card-content>    <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()" ><div style="color:white">Choose</div> </ion-button>    </ion-card-header>  </ion-card>  <ion-card>    <ion-card-header>      <ion-item lines="none">     <ion-icon slot="start" style="width:40px; height:40px; margin-left:-5%" name="location-outline"></ion-icon>      <ion-card-title>Classroom D3.14 <br/>London</ion-card-title>      </ion-item>      <ion-card-content>Frontend & Backend Class</ion-card-content>          <ion-button shape="round" color="logo-green" class="joinButton" (click)="ChooseClassroom()"><div style="color:white">Choose</div> </ion-button>    </ion-card-header>  </ion-card> --></ion-content></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'ClassroomCardComponent', 'selector': 'app-classroom-card'},{'name': 'ExploreContainerComponent', 'selector': 'app-explore-container'},{'name': 'GroupInfoComponent', 'selector': 'app-group-info'},{'name': 'GroupInfoPagePage', 'selector': 'app-group-info-page'},{'name': 'LoginPagePage', 'selector': 'app-login-page'},{'name': 'SignupPage', 'selector': 'app-signup'},{'name': 'Tab1Page', 'selector': 'app-tab1'},{'name': 'Tab2Page', 'selector': 'app-tab2'},{'name': 'Tab3Page', 'selector': 'app-tab3'},{'name': 'Tab4Page', 'selector': 'app-tab4'},{'name': 'Tab5Page', 'selector': 'app-tab5'},{'name': 'TabsPage', 'selector': 'app-tabs'},{'name': 'ZonesPage', 'selector': 'app-zones'},{'name': 'ZoneTableComponent', 'selector': 'app-zone-table'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'Tab3Page'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
+
+
+                   
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
+            var COMPODOC_CURRENT_PAGE_URL = 'Tab3Page.html';
+            var MAX_SEARCH_RESULTS = 15;
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
