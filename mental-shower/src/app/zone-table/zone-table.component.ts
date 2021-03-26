@@ -221,7 +221,7 @@ async saveAlert(){
     cssClass: 'my-custom-class',
     
     header: 'Confirmation',
-    message: '<img src = "/assets/icon/bad-breath.svg"; width="35px"; height="35px"> Are you sure you want to save the preference?',
+    message: ' Are you sure you want to save the preference?',
     buttons: ['OK', 'Cancel']
   });
 
