@@ -53,6 +53,15 @@ return studentFinal;
 
 }
 
+async read_student_with_id(uid:string){
+  try{
+  console.log("reading student with id "+uid);
+  return this.firestore.collection("Students").doc<Student>(uid);
+  }
+  catch{
+    
+  }
+}
 
 
 

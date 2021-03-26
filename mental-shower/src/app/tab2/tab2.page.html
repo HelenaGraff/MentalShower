@@ -17,17 +17,17 @@
   <ion-icon class="preferenceMood" id="moodArrow" name="chevron-forward"></ion-icon>
   <div class="preferenceMoodText" id="moodArrowText">Your preference</div>
 
-  <ion-range class="slider2" (ionBlur)="temperatureRelease()" min="0" max="40" step="1" pin="false" [(ngModel)]="temperature" >
+  <ion-range class="slider2" (blur)="temperatureRelease()" min="0" max="40" step="1" pin="false" [(ngModel)]="temperature" >
         <ion-icon  slot="start" size="large" style="margin-right: 25px" name="thermometer-outline"></ion-icon>
         <ion-icon slot="end" class="infoIcon" name="information-circle-outline" (click)="presentAlert ('Temperature parameter allows you to adjust the degrees in a zone.')"></ion-icon>
   </ion-range>
 
-  <ion-range class="slider3" (ionBlur)="humidityRelease()"  min="0" max="40" step="1" pin="false" [(ngModel)]="humidity" >
+  <ion-range class="slider3" (blur)="humidityRelease()"  min="0" max="40" step="1" pin="false" [(ngModel)]="humidity" >
       <ion-icon slot="start" size="large" style="margin-right: 25px" name="water-outline"></ion-icon>
       <ion-icon class="infoIcon" slot="end" name="information-circle-outline"  (click)="presentAlert ('Humidity parameter allows you to adjust the level of water vapor in the air.')"></ion-icon>
   </ion-range>
  
-  <ion-range class="slider4" (ionBlur)="airQualityRelease()" min="0" max="40" step="1" pin="false" [(ngModel)]="airQuality" >
+  <ion-range class="slider4" (blur)="airQualityRelease()" min="0" max="40" step="1" pin="false" [(ngModel)]="airQuality" >
     <ion-icon slot="start" size="large" style="margin-right: 25px" src="assets/icon/bad-breath.svg"></ion-icon>
     <ion-icon class="infoIcon" slot="end" name="information-circle-outline"  (click)="presentAlert ('Air Quality parameter allows you getting fresh air everytime it is needed.')"></ion-icon>
   </ion-range>

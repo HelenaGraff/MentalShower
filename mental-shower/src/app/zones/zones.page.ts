@@ -66,6 +66,8 @@ seeZones(){
   
 }
 
+
+
 async closeTab() {
 
   console.log('Close');

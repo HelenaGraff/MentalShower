@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChange, SimpleChanges, ɵɵpureFunction1 } from '@angular/core';
 import { FirebaseService } from '../firebase.service';
 import { Student } from '../student';
 import {Storage} from '@ionic/storage-angular';
@@ -6,6 +6,8 @@ import { ModalController } from '@ionic/angular';
 import { GroupInfoPagePage } from '../group-info-page/group-info-page.page';
 import { ZonesPage } from '../zones/zones.page';
 import { NgZone  } from '@angular/core';
+import { promise } from 'selenium-webdriver';
+import { NumberValueAccessor } from '@angular/forms';
 
 @Component({
   selector: 'app-zone-table',
@@ -110,15 +112,112 @@ students:Student[];
         
 
 
-
+       
+    
       })
+      
+     
+      
     }
     
     )
+    this.matching();
 
     
     
   }
+
+matching(){
+
+
+
+let airQualitySum:number;
+let temperatureSum:number;
+let humiditySum:number;
+let airSpeedSum:number;
+let studentCount:number;
+
+
+
+airQualitySum=0;
+temperatureSum=0;
+humiditySum=0;
+airSpeedSum=0;
+studentCount=0;
+
+let currentQuality:number;
+let currentTemperature:number;
+let currentHumidity:number;
+let currentAirspeed:number;
+let avgAvg:number;
+avgAvg=0;
+console.log("starting step 1 ");
+Promise.all([
+  this.storage.get("currentAirQuality"),
+  this.storage.get("currentTemperature"),
+  this.storage.get("currentHumidity"),
+  this.storage.get("currentAirSpeed")
+]).then((res)=>{
+  console.log("step 2: "+res);
+  currentQuality= res[0];
+ currentTemperature=res[1];
+  currentHumidity=res[2];
+  currentAirspeed=res[3];
+}).then(()=>{
+Promise.all([
+
+this.firebaseService.read_student_with_id(this.student1id),
+this.firebaseService.read_student_with_id(this.student2id),
+this.firebaseService.read_student_with_id(this.student3id),
+this.firebaseService.read_student_with_id(this.student4id)
+]).then((res)=>{
+  console.log("step 3 :"+res);
+  res.forEach(x=>{
+    if (x!=null){
+    x.snapshotChanges().subscribe((res)=>{
+      studentCount++;
+   
+     
+     airQualitySum+= res.payload.data().CurrentAirQuality;
+     airSpeedSum+= res.payload.data().CurrentAirSpeed;
+     temperatureSum+= res.payload.data().CurrentTemperature;
+     humiditySum+= res.payload.data().CurrentHumidity;
+     
+    
+     
+     avgAvg+=airQualitySum;
+     avgAvg+=airSpeedSum;
+     avgAvg+=temperatureSum;
+     avgAvg+=humiditySum;
+    avgAvg/=studentCount+1;
+      console.log("average:"+avgAvg);
+   this.matchPercent=((100*avgAvg)/(currentAirspeed+currentHumidity+currentQuality+currentTemperature));
+    //  this.matchPercent=avgAvg;
+      this.matchPercent=Math.trunc(this.matchPercent);
+
+
+    })
+    
+
+
+
+    
+    }})
+  })
+  
+  
+})
+
+
+
+
+
+
+
+}
+
+
+
   joinZone(){
 
     this.storage.get("currentZone").then((res)=>{
