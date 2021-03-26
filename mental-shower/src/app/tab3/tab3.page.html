@@ -8,10 +8,24 @@
 
   <ion-icon name="business-outline" style="width: 25%; height: 25%; margin-bottom: 15px;"></ion-icon>
  
-  
+  <ion-item>
+    <ion-label>Classes</ion-label>
+    <ion-select placeholder="Select classes" (ionChange)="classesVisible()" [(ngModel)]="selectValue">
+      <ion-select-option value="Your classes">Your classes</ion-select-option>
+      <ion-select-option value="All classes">All classes</ion-select-option>
+    </ion-select>
+  </ion-item>
+
   
   <div *ngFor="let item of rooms; let i =index">
+
+    <div *ngIf="i <= 2 && hiddenClass == true">
    <app-classroom-card classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
     </div>
+
+    <div *ngIf="hiddenClass == false">
+      <app-classroom-card classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
+    </div>
+  </div>
  
 </ion-content>

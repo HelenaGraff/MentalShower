@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 import { ModalController } from '@ionic/angular';
 import {GroupInfoComponent} from 'src/app/group-info/group-info.component';
@@ -51,6 +51,21 @@ async ChooseClassroom() {
 });
   return await modal.present();
 }
+
+hiddenClass:boolean
+selectValue:string
+
+classesVisible()
+{
+  if (this.selectValue == "Your classes")
+  {
+    this.hiddenClass = true;
+  }
+  else this.hiddenClass = false;
 }
+
+}
+
+
 
 
