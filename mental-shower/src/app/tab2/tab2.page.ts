@@ -13,6 +13,11 @@ export class Tab2Page {
   constructor( private alertCtrl: AlertController, private storage:Storage, private firebase:FirebaseService)
   {
     storage.create();
+    this.airSpeed=20;
+    this.airQuality=20;
+    this.humidity=20;
+    this.temperature=20;
+    
     
     
 
