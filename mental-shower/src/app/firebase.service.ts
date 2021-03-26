@@ -84,6 +84,40 @@ public read_rooms(){
   return (this.firestore.collection("ClassRooms").snapshotChanges());
 }
 
+public async update_zone(id:string,zone:ZoneTable){
+this.firestore.collection("ZoneTable").doc(id).update(zone);
+}
+
+
+public delete_seat_with_user_id(userId:string){
+  this.firestore.collection("ZoneTable").ref.where("Seat1","==",userId).get().then((res=>{
+    res.docs.forEach(x=>{
+      this.firestore.collection("ZoneTable").doc(x.id).update({Seat1:""});
+      
+    })
+  }));
+  
+  this.firestore.collection("ZoneTable").ref.where("Seat2","==",userId).get().then((res=>{
+    res.docs.forEach(x=>{
+      this.firestore.collection("ZoneTable").doc(x.id).update({Seat2:""});
+    })
+  }));
+  
+  this.firestore.collection("ZoneTable").ref.where("Seat3","==",userId).get().then((res=>{
+    res.docs.forEach(x=>{
+      this.firestore.collection("ZoneTable").doc(x.id).update({Seat3:""});
+    })
+  }));
+  
+  this.firestore.collection("ZoneTable").ref.where("Seat4","==",userId).get().then((res=>{
+    res.docs.forEach(x=>{
+      this.firestore.collection("ZoneTable").doc(x.id).update({Seat4:""});
+    })
+  }));
+  
+  
+  
+  }
 
 
 public async read_zone(uid:string):Promise<ZoneTable>{

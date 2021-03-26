@@ -86,9 +86,9 @@ loginWithGoogle(){
 
     console.log("successfully logged in with google");
     console.log(res.name);
+    console.log("logged in id:"+res.id);
 
-
-    this.storage.set("name",res.name);
+     this.storage.set("name",res.name);
      this.storage.set("userId",res.id);
      this.storage.set("loggedIn",true);
      this.storage.set("pictureUrl",res.photoUrl);
