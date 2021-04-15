@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 db.sequelize.sync();
 // simple route
 app.get("/", (req, res) => {
-  res.json({ message: "Welcome to bezkoder application." });
+  res.json({ message: "Welcome to mood API." });
 });
 
 // set port, listen for requests
