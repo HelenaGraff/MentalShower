@@ -6,9 +6,6 @@ module.exports = (sequelize, Sequelize) => {
       lastName: {
         type: Sequelize.STRING
       },
-      studentId: {
-        type: Sequelize.INTEGER
-      },
       profilePicUrl:{
           type:Sequelize.STRING
       },

@@ -20,10 +20,10 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 db.students = require("./student.model.js")(sequelize, Sequelize);
-db.preferences=require("./preference.model.js")(sequelize,Sequelize);
-db.zones=require("./zone.model.js")(sequelize,Sequelize);
-db.classrooms=require("./classroom.model.js")(sequelize,Sequelize);
-db.classroomHasStudents=require("./classroomHasStudent.model.js")(sequelize,Sequelize);
+db.preferences= require("./preference.model.js")(sequelize, Sequelize);
+db.zones = require("./zone.model.js")(sequelize, Sequelize);
+db.classrooms = require("./classroom.model.js")(sequelize, Sequelize);
+db.classroomHasStudents = require("./classroomHasStudent.model.js")(sequelize, Sequelize);
 
 
 module.exports = db;
