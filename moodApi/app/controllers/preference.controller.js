@@ -1,5 +1,5 @@
 const db = require("../models");
-const Preferences = db.preferences;
+const Preference = db.preferences;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
@@ -19,11 +19,11 @@ exports.create = (req, res) => {
     temperature: req.body.temperature,
     humidity: req.body.humidity,
     zoneId: req.body.zoneId,
-    studentId: req.body.studentId
+    studentId: req.body.studentId,
   };
 
   // Save Tutorial in the database
-  Preferences.create(preference)
+  Preference.create(preference)
     .then(data => {
       res.send(data);
     })
@@ -40,7 +40,7 @@ exports.findAll = (req, res) => {
     const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
-  Preferences.findAll({ where: condition })
+  Preference.findAll({ where: condition })
     .then(data => {
       res.send(data);
     })

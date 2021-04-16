@@ -13,10 +13,10 @@ module.exports = (sequelize, Sequelize) => {
           type:Sequelize.INTEGER
       },
       studentId:{
-        type:Sequelize.STRING
+        type:Sequelize.INTEGER
      },
       zoneId:{
-      type:Sequelize.STRING
+      type:Sequelize.INTEGER
     }
 
     });

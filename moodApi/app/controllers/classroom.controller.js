@@ -1,4 +1,3 @@
-const { classroom } = require("../models");
 const db = require("../models");
 const Classroom = db.classrooms;
 const Op = db.Sequelize.Op;
@@ -14,9 +13,9 @@ exports.create = (req, res) => {
   }
 
   // Create a Tutorial
-  const Classroom = {
+  const classroom = {
     courseName: req.body.courseName,
-    classroomName: req.body.classroomName
+    classroomName: req.body.classroomName,
   };
 
   // Save Tutorial in the database
@@ -37,7 +36,7 @@ exports.findAll = (req, res) => {
     const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
-  Zones.findAll({ where: condition })
+  Classroom.findAll({ where: condition })
     .then(data => {
       res.send(data);
     })

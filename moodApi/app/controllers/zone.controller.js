@@ -1,5 +1,5 @@
 const db = require("../models");
-const Zones = db.Zones;
+const Zone = db.zones;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
@@ -18,11 +18,11 @@ exports.create = (req, res) => {
     seat2: req.body.seat2,
     seat3: req.body.seat3,
     seat4: req.body.seat4,
-    classroomId: req.body.classroomId
+    classroomId: req.body.classroomId,
   };
 
   // Save Tutorial in the database
-  Zones.create(zone)
+  Zone.create(zone)
     .then(data => {
       res.send(data);
     })
@@ -39,7 +39,7 @@ exports.findAll = (req, res) => {
     const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
-  Zones.findAll({ where: condition })
+  Zone.findAll({ where: condition })
     .then(data => {
       res.send(data);
     })

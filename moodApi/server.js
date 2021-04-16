@@ -5,6 +5,10 @@ const db=require("./app/models");
 const app = express();
 
 require("./app/routes/student.routes")(app);
+require("./app/routes/zone.routes")(app);
+require("./app/routes/preference.routes")(app);
+require("./app/routes/classroom.routes")(app);
+require("./app/routes/classroomHasStudent.routes")(app);
 
 var corsOptions = {
   origin: "http://localhost:8081"

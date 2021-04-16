@@ -1,6 +1,5 @@
-const { classroomHasStudents } = require("../models");
 const db = require("../models");
-const ClassroomHasStudents = db.classroomHasStudents;
+const ClassroomHasStudent = db.classroomHasStudents;
 const Op = db.Sequelize.Op;
 
 // Create and Save a new Tutorial
@@ -15,12 +14,12 @@ exports.create = (req, res) => {
 
   // Create a Tutorial
   const classroomHasStudent = {
-    courseName: req.body.courseName,
-    classroomName: req.body.classroomName
+    studentId: req.body.studentId,
+    classroomId: req.body.classroomId,
   };
 
   // Save Tutorial in the database
-  ClassroomHasStudents.create(classroomHasStudents)
+  ClassroomHasStudent.create(classroomHasStudent)
     .then(data => {
       res.send(data);
     })
@@ -37,7 +36,7 @@ exports.findAll = (req, res) => {
     const title = req.query.title;
   var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
 
-  Zones.findAll({ where: condition })
+  ClassroomHasStudent.findAll({ where: condition })
     .then(data => {
       res.send(data);
     })

@@ -1,13 +1,13 @@
 module.exports = app => {
-    const zone = require("../controllers/zone.controller.js");
+    const zones = require("../controllers/zone.controller.js");
   
     var router = require("express").Router();
   
     // Create a new Tutorial
-    router.post("/", zone.create);
+    router.post("/", zones.create);
   
     // Retrieve all Tutorials
-    router.get("/", zone.findAll);
+    router.get("/", zones.findAll);
   
     // Retrieve all published Tutorials
   //  router.get("/published", tutorials.findAllPublished);
@@ -24,5 +24,5 @@ module.exports = app => {
     // Delete all Tutorials
    // router.delete("/", tutorials.deleteAll);
   
-    app.use('/api/zone', router);
+    app.use('/api/zones', router);
   };

@@ -1,5 +1,3 @@
-const { classroomHasStudents } = require(".");
-
 module.exports = (sequelize, Sequelize) => {
     const classroomHasStudent = sequelize.define("classroomHasStudent", {
      classroomId: {
@@ -11,5 +9,5 @@ module.exports = (sequelize, Sequelize) => {
 
     });
   
-    return classroomHasStudents;
+    return classroomHasStudent;
   };
