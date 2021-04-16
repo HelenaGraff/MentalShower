@@ -103,7 +103,7 @@ exports.delete = (req, res) => {
         });
       } else {
         res.send({
-          message: `Cannot delete Tutorial with id=${id}. Maybe Student was not found!`
+          message: `Cannot delete Student with id=${id}. Maybe Student was not found!`
         });
       }
     })

@@ -13,13 +13,13 @@ module.exports = app => {
   //  router.get("/published", tutorials.findAllPublished);
   
     // Retrieve a single Tutorial with id
-   // router.get("/:id", tutorials.findOne);
+    router.get("/:id", classroomHasStudents.findOne);
   
     // Update a Tutorial with id
-   // router.put("/:id", tutorials.update);
+    router.put("/:id", classroomHasStudents.update);
   
     // Delete a Tutorial with id
-  //  router.delete("/:id", tutorials.delete);
+    router.delete("/:id", classroomHasStudents.delete);
   
     // Delete all Tutorials
    // router.delete("/", tutorials.deleteAll);
