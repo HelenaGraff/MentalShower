@@ -1,14 +1,8 @@
-const express = require("express");
-const bodyParser = require("body-parser");
+const bodyParser=require("body-parser");
+const express = require('express');
 const cors = require("cors");
 const db=require("./app/models");
 const app = express();
-
-require("./app/routes/student.routes")(app);
-require("./app/routes/zone.routes")(app);
-require("./app/routes/preference.routes")(app);
-require("./app/routes/classroom.routes")(app);
-require("./app/routes/classroomHasStudent.routes")(app);
 
 var corsOptions = {
   origin: "http://localhost:8081"
@@ -16,13 +10,22 @@ var corsOptions = {
 
 app.use(cors(corsOptions));
 
-// parse requests of content-type - application/json
-app.use(bodyParser.json());
 
-// parse requests of content-type - application/x-www-form-urlencoded
-app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
+require("./app/routes/student.routes")(app);
+require("./app/routes/zone.routes")(app);
+require("./app/routes/preference.routes")(app);
+require("./app/routes/classroom.routes")(app);
+require("./app/routes/classroomHasStudent.routes")(app);
+
+
 db.sequelize.sync();
-// simple route
+// simple routes
 app.get("/", (req, res) => {
   res.json({ message: "Welcome to mood API." });
 });
