@@ -8,6 +8,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 
+import { HttpClientModule } from '@angular/common/http';
+import {MySqlServiceService} from './my-sql-service.service';
+
+
 import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { Facebook } from '@ionic-native/facebook/ngx';
@@ -22,7 +26,7 @@ import { GoogleLoginProvider } from 'angularx-social-login';
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, AngularFireModule.initializeApp(environment.firebase), AngularFireAuthModule, AngularFireDatabaseModule,
-    AngularFirestoreModule, IonicStorageModule, IonicStorageModule.forRoot(), SocialLoginModule],
+    AngularFirestoreModule, HttpClientModule, IonicStorageModule, IonicStorageModule.forRoot(), SocialLoginModule],
   providers: [{
     provide: 'SocialAuthServiceConfig',
     useValue: {

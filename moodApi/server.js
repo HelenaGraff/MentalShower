@@ -5,11 +5,17 @@ const db=require("./app/models");
 const app = express();
 
 var corsOptions = {
-  origin: "http://localhost:8081"
+  origin: false
 };
 
-app.use(cors(corsOptions));
 
+
+
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 
 app.use(express.json());
@@ -22,6 +28,7 @@ require("./app/routes/zone.routes")(app);
 require("./app/routes/preference.routes")(app);
 require("./app/routes/classroom.routes")(app);
 require("./app/routes/classroomHasStudent.routes")(app);
+
 
 
 db.sequelize.sync();

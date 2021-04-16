@@ -3,6 +3,7 @@ import {FirebaseService} from 'src/app/firebase.service';
 import {Storage} from '@ionic/storage-angular';
 import { Router } from '@angular/router';
 import {AlertController} from '@ionic/angular';
+import { MySqlServiceService } from '../my-sql-service.service';
 
 @Component({
   selector: 'app-tab4',
@@ -15,9 +16,12 @@ export class Tab4Page implements OnInit {
   profilePictureUrl:string;
   overlayHidden: boolean = false;
 
-  constructor(firebase:FirebaseService,public storage:Storage, private router:Router, public alertController: AlertController) {
+  constructor(firebase:FirebaseService,public storage:Storage, private router:Router, public alertController: AlertController, mySqlService:MySqlServiceService) {
       storage.create(); 
       this.profilePictureUrl="src/assets/basic_avatar2.jpg";
+
+   mySqlService.getAllMySqlClassrooms();
+   
     }
 
     public hideOverlay() {
