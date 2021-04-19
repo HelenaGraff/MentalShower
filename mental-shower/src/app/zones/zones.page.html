@@ -9,15 +9,18 @@
 <ion-content>
   
 
-<div   *ngFor="let item of zone1" >
-<app-zone-table id={{item.id}} class="Zone1"  zoneId={{item.id}} student1id={{item.Seat1}} student2id={{item.Seat2}} student3id={{item.Seat3}} student4id={{item.Seat4}}></app-zone-table>  
+<div   *ngFor="let item of mySqlZone1" >
+<app-zone-table id={{item.id}} class="Zone1"  zoneId={{item.id}} student1id={{item.seat1}} student2id={{item.seat2}} student3id={{item.seat3}} student4id={{item.seat4}}></app-zone-table>  
 </div>
 
 <div style="height:25px; display: inline-block;"  ></div>
-<div  *ngFor="let item of zone2" >
+<div  *ngFor="let item of mySqlZone2" >
   <div style="height:335px; display: inline-block;"  ></div>
-  <app-zone-table class="Zone2"   id={{item.id}} zoneId={{item.id}} student1id={{item.Seat1}} student2id={{item.Seat2}} student3id={{item.Seat3}} student4id={{item.Seat4}}></app-zone-table>  
+  <app-zone-table class="Zone2"   id={{item.id}} zoneId={{item.id}} student1id={{item.seat1}} student2id={{item.seat2}} student3id={{item.seat3}} student4id={{item.seat4}}></app-zone-table>  
   </div>
+
+
+ 
 
 
 

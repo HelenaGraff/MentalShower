@@ -25,5 +25,10 @@ db.zones = require("./zone.model.js")(sequelize, Sequelize);
 db.classrooms = require("./classroom.model.js")(sequelize, Sequelize);
 db.classroomHasStudents = require("./classroomHasStudent.model.js")(sequelize, Sequelize);
 
+db.classrooms.hasMany(db.zones,{as :"zones"});
+db.zones.belongsTo(db.classrooms,{foreignKey:"classroomId",as : "classroom"});
+
+db.students.belongsToMany(db.classrooms,{through: "student_classroom", as: "classrooms", foreignKey: "studentId"});
+db.classrooms.belongsToMany(db.students,{through: "student_classroom", as: "students", foreignKey: "classroomId"});
 
 module.exports = db;

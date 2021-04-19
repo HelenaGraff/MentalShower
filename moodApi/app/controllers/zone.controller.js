@@ -51,6 +51,23 @@ exports.findAll = (req, res) => {
     });
 };
 
+exports.findWithClassroomId= (req, res) => {
+  const title = req.query.title;
+var condition = title ? { title: { [Op.like]: `%${title}%` } } : null;
+
+Zone.findAll({where:{classroomId: req.params.classroomId}})
+  .then(data => {
+    res.send(data);
+  })
+  .catch(err => {
+    res.status(500).send({
+      message:
+        err.message || "Some error occurred while retrieving zones."
+    });
+  });
+};
+
+
 // Find a single Tutorial with an id
 exports.findOne = (req, res) => {
   const id = req.params.id;

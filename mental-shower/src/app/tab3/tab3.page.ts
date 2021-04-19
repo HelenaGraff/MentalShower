@@ -6,7 +6,8 @@ import {GroupInfoPagePage} from 'src/app/group-info-page/group-info-page.page';
 import {ZonesPage} from 'src/app/zones/zones.page';
 import {FirebaseService} from 'src/app/firebase.service';
 import { Classroom } from '../classroom';
-import { MySqlServiceService } from '../my-sql-service.service';
+import {  MySqlServiceService } from '../my-sql-service.service';
+import { MySqlClassroom} from '../my-sql-classroom';
 
 @Component({
   selector: 'app-tab3',
@@ -17,11 +18,16 @@ export class Tab3Page {
 
   public student: any;
   public rooms:Classroom[];
+  public mysqlRooms:MySqlClassroom[];
+
+
   constructor(private alertCtrl: AlertController,mySqlService:MySqlServiceService, private modalController: ModalController, private firebaseService: FirebaseService) {
 
-   
+   this.mysqlRooms=[];
+
     mySqlService.getAllMySqlClassrooms().subscribe(data=>{
       data.forEach(item=>{
+        this.mysqlRooms.push(item);
         console.log(item.classroomName);
       })
     });

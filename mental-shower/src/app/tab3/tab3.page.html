@@ -17,14 +17,14 @@
   </ion-item>
 
   
-  <div *ngFor="let item of rooms; let i =index">
+  <div *ngFor="let item of mysqlRooms; let i =index">
 
     <div *ngIf="i <= 2 && hiddenClass == true">
-   <app-classroom-card courseName={{item.CourseName}} classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
+   <app-classroom-card courseName={{item.courseName}} classroomName={{item.classroomName}} firestoreId={{item.id}}></app-classroom-card>
     </div>
 
     <div *ngIf="hiddenClass == false">
-      <app-classroom-card courseName={{item.CourseName}} classroomName={{item.Name}} firestoreId={{item.id}}></app-classroom-card>
+      <app-classroom-card courseName={{item.courseName}} classroomName={{item.classroomName}} firestoreId={{item.id}}></app-classroom-card>
     </div>
   </div>
  
